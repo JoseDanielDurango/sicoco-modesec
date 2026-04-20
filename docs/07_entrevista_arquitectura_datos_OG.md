@@ -49,7 +49,7 @@ A continuación, se presentan 20 preguntas que deben realizarse durante la entre
 
 ---
 
-## 🏗️ Bloque 4: Andamiaje Metacognitivo (Los 4 Pilares de Salida)
+## 🏗️ Bloque 4: Pilares de Información (Los 4 Puntos Clave de Salida)
 
 **11. Del punto pedagógico, sabemos que debemos capturar "Acuerdos". ¿Qué atributos componen un "Acuerdo"?**
 > 💡 **Posible Respuesta (Datos):** Entidad `Acuerdo_Equipo`: `ID_Acuerdo`, `ID_Resumen`, `Descripcion_Solucion`, `Nivel_Importancia` (Alto/Medio/Bajo), y el/los `Alias_Quien_Propone`.

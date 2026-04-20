@@ -32,7 +32,7 @@ A continuación, se presentan 20 preguntas diseñadas para descubrir a fondo la 
 
 ---
 
-## 🏗️ Bloque 4: Andamiaje Metacognitivo (Los 4 Pilares de Salida)
+## 🏗️ Bloque 4: Pilares de Información (Los 4 Puntos Clave de Salida)
 
 **11.** De todo el texto, sabemos que la IA rescata "Acuerdos". Viéndolo como en una tabla estructural, ¿qué detalles concretos de un acuerdo se deben almacenar?  
 **12.** Al enfocarnos en los "Desacuerdos o Posturas Encontradas" rescatados, ¿qué tipo de reporte en datos nos exige dejarlo plasmado?  
