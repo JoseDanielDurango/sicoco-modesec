@@ -17,14 +17,14 @@
 ---
 
 ## 📂 ZONA 2: Entradas y Sesiones de Trabajo (SES)
-**Manejo de la entidad:** Reunión, Archivo_Chat y Mensajes individuales.
+**Manejo de la entidad:** Reunión, Registro_Chat y Mensajes individuales.
 
 | ID | Historia (Como / Quiero / Para) | Valor | Prioridad | Dependencias | Criterios de aceptación |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **SES-01** | Como estudiante, quiero crear una Sesión de Trabajo con fecha y hora para iniciar la co-creación. | Alta | Must | PER-04 | Dado un ID_Equipo.<br>Cuando se abre la sesión<br>Entonces se genera el registro en la entidad Sesion_Trabajo. |
-| **SES-02** | Como estudiante, quiero subir un archivo .txt o .csv para que el sistema administre el archivo físico. | Alta | Must | SES-01 | Dado un archivo de chat.<br>Cuando se sube<br>Entonces se guarda la ruta, tamaño y fecha en la tabla Archivo. |
-| **SES-03** | Como sistema, quiero separar los mensajes individuales (Cuerpo y Autor) para analizarlos por separado. | Alta | Must | SES-02 | Dado un archivo cargado.<br>Cuando se procesa<br>Entonces cada línea se guarda con su ID_Autor y Marca_Tiempo. |
-| **SES-04** | Como usuario, quiero ver el historial de archivos subidos por sesión para evitar duplicar información. | Media | Should | SES-02 | Dado una sesión activa.<br>Cuando consulto archivos<br>Entonces el sistema lista los nombres y fechas de carga. |
+| **SES-02** | Como estudiante, quiero ingresar el historial de chat para que el sistema administre el registro físico/digital. | Alta | Must | SES-01 | Dado un registro de chat.<br>Cuando se ingresa<br>Entonces se guarda la ruta, origen o metadata en la tabla Registro. |
+| **SES-03** | Como sistema, quiero separar los mensajes individuales (Cuerpo y Autor) para analizarlos por separado. | Alta | Must | SES-02 | Dado un registro ingresado.<br>Cuando se procesa<br>Entonces cada línea se guarda con su ID_Autor y Marca_Tiempo. |
+| **SES-04** | Como usuario, quiero ver el historial de registros ingresados por sesión para evitar duplicar información. | Media | Should | SES-02 | Dado una sesión activa.<br>Cuando consulto registros<br>Entonces el sistema lista las fechas y orígenes de carga. |
 
 ---
 

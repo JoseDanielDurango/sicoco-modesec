@@ -8,7 +8,7 @@ Le haremos tres pruebas controladas al programa con pequeños grupos de estudian
 
 ## 🧪 1. Prueba de Precisión (Test Técnico)
 
-Tomaremos un archivo de texto de una charla donde el grupo llegó a un acuerdo y se lo daremos a SICOCO.
+Tomaremos el historial de una charla donde el grupo llegó a un acuerdo y se lo daremos a SICOCO.
 
 - 🎯 ¿El resumen muestra lo que el grupo de verdad decidió?
 - 🛡️ ¿El sistema se da cuenta de errores o de tareas que nadie pidió realmente?
@@ -17,7 +17,7 @@ Tomaremos un archivo de texto de una charla donde el grupo llegó a un acuerdo y
 
 ## 👁️ 2. Revisión de Facilidad de Uso (Usabilidad)
 
-Revisaremos a fondo qué tan fácil es usar la pantalla principal de resumen. 
+Revisaremos a fondo qué tan fácil es usar la interfaz principal de resumen.
 
 - ✨ ¿Es agradable y clara? 
 - 🎨 ¿El usuario nota la diferencia entre "Acuerdos" y "Tareas" a simple vista?

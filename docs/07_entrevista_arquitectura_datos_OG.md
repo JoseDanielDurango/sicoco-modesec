@@ -31,11 +31,11 @@ A continuación, se presentan 20 preguntas que deben realizarse durante la entre
 **6. Cuando un equipo se reúne a discutir un proyecto, ¿qué datos guarda SICOCO de la propia reunión o sesión?**
 > 💡 **Posible Respuesta (Datos):** Entidad `Sesion_Trabajo`: `ID_Sesion`, `ID_Equipo`, `Fecha_Reunion`, `Objetivo_General`, `Plataforma_Origen` (Ej. Discord, Teams, WhatsApp), y `Duracion_Estimada`.
 
-**7. Los usuarios suben el registro de su chat (el archivo .txt o .csv). ¿Qué información guardamos sobre este archivo físico?**
-> 💡 **Posible Respuesta (Datos):** Entidad `Archivo_Upload`: `ID_Archivo`, `ID_Sesion`, `Ruta_Almacenamiento` (URL del archivo), `Formato_Archivo` (txt, csv), `Peso_Bytes`, y el `ID_Estudiante_Sube`.
+**7. Los usuarios proveen el registro de su chat al sistema. ¿Qué información guardamos sobre este ingreso?**
+> 💡 **Posible Respuesta (Datos):** Entidad `Registro_Chat`: `ID_Registro`, `ID_Sesion`, `Origen_Metadata` (URL, Path o Buffer), `Formato_Entrada` (txt, csv, JSON), `Tamaño_Datos`, y el `ID_Estudiante_Ingresa`. *(Nota: Entidad sujeta a la arquitectura de ingreso final).*
 
 **8. Antes del resumen, ¿es necesario guardar cada mensaje individual del chat en la base de datos por separado?**
-> 💡 **Posible Respuesta (Datos):** Serviría mucho para precisión. Entidad `Mensaje_Original`: `ID_Mensaje`, `ID_Archivo`, `Alias_Remitente`, `Cuerpo_Del_Mensaje` (Texto), `Fecha_Hora_Mensaje` (Timestamp).
+> 💡 **Posible Respuesta (Datos):** Serviría mucho para precisión. Entidad `Mensaje_Original`: `ID_Mensaje`, `ID_Registro`, `Alias_Remitente`, `Cuerpo_Del_Mensaje` (Texto), `Fecha_Hora_Mensaje` (Timestamp).
 
 ---
 
@@ -91,4 +91,4 @@ A continuación, se presentan 20 preguntas que deben realizarse durante la entre
 ## 🔒 Bloque 7: Escalabilidad, Privacidad y Seguridad
 
 **20. Como SICOCO alberga los chats de personas y puede escalar a un entorno universitario permanente, ¿qué campos de infraestructura y permisos tenemos para asegurar su privacidad?**
-> 💡 **Posible Respuesta (Datos):** Cada tabla requerirá campos de `Created_At` (Fecha cración) y `Updated_At`. El archivo del chat tendrá una bandera `Es_Confidencial` y los equipos de trabajo `Requiere_Aprobacion_Profesor`. Los IDs deben ser encriptados o en formato UUID para evitar fuga o que otros equipos miren los acuerdos de la competencia por predecir la URL.
+> 💡 **Posible Respuesta (Datos):** Cada tabla requerirá campos de `Created_At` (Fecha creación) y `Updated_At`. El registro del chat tendrá una bandera `Es_Confidencial` y los equipos de trabajo `Requiere_Aprobacion_Profesor`. Los IDs deben ser encriptados o en formato UUID para evitar fuga o que otros equipos miren los acuerdos de la competencia.

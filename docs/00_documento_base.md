@@ -19,7 +19,7 @@ El entorno de aprendizaje actual exige que los estudiantes trabajen en equipo ut
 
 ## 💡 La Solución Propuesta
 
-Desarrollar una aplicación web (Producto Mínimo Viable) que permita a los estudiantes subir sus archivos de chat grupal y utilizar Inteligencia Artificial para extraer de forma estructurada los puntos más importantes de la discusión, categorizándolos visualmente.
+Desarrollar un Producto Mínimo Viable (cuyo formato de despliegue está sujeto a evaluación técnica y podría ser una app web, un programa local, una extensión, etc.) que permita a los estudiantes ingresar sus historiales de chat grupal y utilizar Inteligencia Artificial para extraer de forma estructurada los puntos más importantes de la discusión, categorizándolos visualmente.
 
 ---
 
@@ -45,7 +45,7 @@ Desarrollar un Producto Mínimo Viable de la herramienta SICOCO que utilice Inte
 
 ## 🔮 Supuestos
 
-- Se asume que los estudiantes saben exportar chats desde sus plataformas de mensajería (ej. WhatsApp) en formato `.txt` o `.csv`.
+- Se asume que los estudiantes saben exportar o trasladar chats desde sus plataformas de mensajería (ej. WhatsApp) al sistema, independientemente de si finalmente se requiere una carga de archivo o copiar texto directamente.
 - Se asume que los equipos mantienen una comunicación escrita lo suficientemente clara y estructurada para que una IA identifique intenciones de trabajo.
 - Se cuenta con acceso a APIs de IA generativa (OpenAI, Gemini o similares) bajo los planes gratuitos o en cuotas financiables por estudiantes.
 
@@ -54,7 +54,7 @@ Desarrollar un Producto Mínimo Viable de la herramienta SICOCO que utilice Inte
 ## 🚧 Posibles Riesgos
 
 - **Alucinación de la IA:** Que el modelo de lenguaje genere acuerdos o asigne tareas que el grupo nunca mencionó en realidad.
-- **Resistencia al uso:** Que a los estudiantes les parezca tedioso el proceso manual de descargar y subir el archivo del chat al sistema.
+- **Resistencia al uso:** Que a los estudiantes les parezca tedioso el proceso de proveer el historial del chat al sistema (por ejemplo, si el formato final exige descargas manuales muy largas).
 - **Mala calidad de datos de entrada:** Que el chat esté lleno de audios, imágenes o stickers, limitando fuertemente el texto que la IA puede procesar y afectando el resumen final.
 
 ---
@@ -62,9 +62,9 @@ Desarrollar un Producto Mínimo Viable de la herramienta SICOCO que utilice Inte
 ## ❓ Preguntas Frecuentes (FAQ)
 
 - **¿SICOCO funciona en tiempo real conectado a WhatsApp?**
-  No. Por razones técnicas y de privacidad en este MVP, el usuario debe subir manualmente el historial exportado del chat.
+  No. Por razones técnicas y de privacidad en este MVP, el historial deberá ser proveído al sistema de manera asíncrona. El método exacto de ingreso (carga de archivo, copy/paste, extensión) aún se encuentra en etapa de diseño y evaluación.
 - **¿Qué tipo de chats puede analizar?**
-  Archivos de texto plano generados directamente por exportaciones de plataformas de comunicación colaborativa o transcripciones simples.
+  Historiales generados por plataformas de comunicación colaborativa o transcripciones simples. El formato exacto (texto plano, u otros) dependerá de la arquitectura que se termine eligiendo.
 - **¿Es seguro usarlo con tareas de la Universidad?**
   Sí, SICOCO procesará el texto sin almacenar datos sensibles por tiempo indefinido, enfocándose puramente en la extracción de aprendizaje.
 

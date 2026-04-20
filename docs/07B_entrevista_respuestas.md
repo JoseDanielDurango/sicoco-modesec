@@ -22,8 +22,8 @@ A continuación, se presentan las respuestas a la entrevista bajo la óptica de 
 **6. Sobre la composición formal de una sesión de trabajo:**
 > 📅 "Cada vez que un equipo se reúna mediante una aplicación de mensajería, será pertinente capturar el objetivo central o tema discutido en dicha sesión. Posteriormente, el sistema debe registrar la fecha y hora de inicio de la reunión, así como identificar la plataforma de origen desde la cual se extrajo la conversación, tales como Discord, WhatsApp o Microsoft Teams."
 
-**7. Sobre el registro de los archivos subidos al sistema:**
-> 📂 "Todo documento cargado a la plataforma, como actúan los archivos `.csv` o `.txt` con el historial del chat, debe ser debidamente auditado. Necesitamos registrar la ruta de almacenamiento interno en el servidor, su formato específico y el tamaño en bytes para evitar inconsistencias de almacenamiento. Por supuesto, debe quedar registrada la matrícula del estudiante responsable de subir el documento al sistema."
+**7. Sobre el registro de la información ingresada al sistema:**
+> 📂 "Todo registro cargado a la plataforma, ya sea archivo de historial u otro método, debe ser debidamente auditado. Necesitamos registrar su origen, formato específico y metadatos para evitar inconsistencias de procesamiento. Por supuesto, debe quedar registrada la matrícula del estudiante responsable de ingresar el documento al sistema."
 
 **8. Sobre la pertinencia de almacenar mensajes individuales:**
 > 💬 "Almacenar mensajes de manera individual es altamente recomendable para mantener un nivel óptimo de precisión durante el análisis de IA. En este escenario, deberíamos registrar cada mensaje de manera separada, incluyendo su marca de tiempo exacta, el identificador o alias del usuario emisor dentro de la plataforma conversacional y el texto crudo del mensaje original correspondiente."

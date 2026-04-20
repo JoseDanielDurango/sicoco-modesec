@@ -8,7 +8,7 @@ Este es el plan básico para desarrollar el programa bajo un modelo **MVP (Produ
 
 Para evitar la complejidad técnica de integraciones con APIs externas o web scraping en vivo (ej. bots en Discord o Telegram), el sistema recibirá la información de manera unificada:
 
-- 🟢 **Carga Manual (Web MVP):** Una pantalla web sencilla donde el estudiante sube manualmente el archivo de historial (`.txt` o `.csv`) exportado directamente desde sus chats de trabajo grupal.
+- 🟢 **Ingreso de Historiales (Sujeto a Evaluación):** Se proveerá una interfaz sencilla (ya sea una aplicación web, un programa de escritorio local, o una extensión de navegador, aún por definir) donde el estudiante ingresará el historial exportado de sus chats de trabajo grupal.
 
 > ⚠️ *(Nota: Esta restricción asegura la factibilidad del proyecto para el equipo de desarrollo, eludiendo problemas de tokens en tiempo real, bloqueos de plataformas y políticas de privacidad en tiempo real).*
 
@@ -25,6 +25,6 @@ SICOCO funcionará consumiendo las APIs de Inteligencias Artificiales generativa
 
 ## 🖥️ Pantalla para el Usuario (UI)
 
-Se construirá una pantalla de síntesis (Dashboard) estructurada y clara, sin requerir gráficas dinámicas excesivamente complejas. 
+Se construirá una interfaz gráfica (Dashboard) estructurada y clara, sin requerir elementos dinámicos excesivamente complejos. 
 
 > 💡 Lo primordial es exponer de manera visual los elementos extraídos, como identificar al autor del acuerdo y enlistar las tareas pendientes, para que cualquier miembro del equipo comprenda el estatus general de un solo vistazo.

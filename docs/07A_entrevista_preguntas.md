@@ -20,7 +20,7 @@ A continuación, se presentan 20 preguntas diseñadas para descubrir a fondo la 
 ## 💬 Bloque 2: Entradas de Datos (Chats y Sesiones de Trabajo)
 
 **6.** Cuando un equipo se reúne a discutir un proyecto o tema, ¿qué datos guarda SICOCO de la propia reunión o sesión?  
-**7.** Sabiendo que los usuarios suben el registro del chat (el archivo `.txt` o `.csv`). ¿Qué información administramos sobre el archivo físico que ingresa?  
+**7.** Sabiendo que los usuarios proveerán el registro del chat al sistema. ¿Qué información administramos sobre este registro (físico o digital) que ingresa?  
 **8.** Antes incluso de generar un resumen con IA, ¿es necesario guardar cada uno de los mensajes individuales del chat original por separado?
 
 ---
