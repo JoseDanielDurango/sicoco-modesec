@@ -1,28 +1,28 @@
 # 🛠️ Fase 4: Producción y Desarrollo
 
-En esta etapa vamos a crear el primer modelo real del programa, uniendo todo lo que planeamos en los pasos anteriores.
+En esta etapa vamos a crear el primer modelo real del programa, ensamblando la interfaz web (MVP) con el motor de Inteligencia Artificial.
 
 ---
 
 ## 🧩 Integración
 
-Se programará cómo el usuario usa el sistema y cómo se conecta a la Inteligencia Artificial. Nos aseguraremos de que el texto se envíe bien y que las respuestas se muestren en orden.
+Se programará la interfaz donde el usuario cargará su documento y cómo el backend se conecta a la API de la Inteligencia Artificial. Nos aseguraremos de que el texto del historial se envíe estructuradamente y que la respuesta procesada se muestre en el Dashboard.
 
 ---
 
-## 🎯 Darle Instrucciones a la IA (Ajuste Fino)
+## 🎯 Ingeniería de Prompts (Instrucciones a la IA)
 
-**Esta es la parte más importante de la programación.**
+**Esta es la parte más crítica de la programación.**
 
-Tendremos que mejorar varias veces las instrucciones que le damos a la IA para que no "invente" cosas. Así lograremos que saque la información correcta, sin perder el sentido ni la forma en que el grupo hablaba.
+Dado que no entrenaremos un modelo desde cero, tendremos que iterar y perfeccionar múltiples veces las instrucciones (prompts) que le damos a la IA para minimizar las "alucinaciones" (que no invente tareas). Así lograremos que extraiga la información precisa, sin perder el contexto ni la intención original del grupo.
 
 ---
 
 ## 💬 Trabajar con Distintos Textos
 
-El programa tendrá que manejar al menos dos formas de comunicarse:
+El programa tendrá que manejar historiales exportados que provienen de al menos dos formas de comunicarse:
 
-- ⚡ **Chats rápidos y cortos** (mensajes pequeños, al estilo de WhatsApp o Telegram).
-- 📑 **Foros ordenados y formales** (mensajes más largos y pensados).
+- ⚡ **Chats rápidos y cortos** (mensajes fraccionados, al estilo de WhatsApp o Telegram).
+- 📑 **Foros ordenados y formales** (mensajes largos, reflexivos y estructurados).
 
-> 💡 *(SICOCO tendrá que darse cuenta de qué tipo de chat se subió y adaptarse para sacar la misma calidad de información).*
+> 💡 *(La instrucción de la IA en SICOCO tendrá que estar diseñada para identificar qué tipo de ritmo conversacional está leyendo y adaptarse para extraer la misma calidad de información en ambos escenarios).*

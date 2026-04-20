@@ -1,31 +1,30 @@
-# 💻 Fase 3: Diseño Computacional (Cómo está hecho)
+# 💻 Fase 3: Diseño Computacional (Arquitectura Técnica)
 
-Este es el plan básico para hacer el programa bajo un modelo **MVP (Producto Mínimo Viable)**. Esto asegura que el proyecto no sea demasiado grande y se pueda terminar en un semestre de la universidad.
+Este es el plan básico para desarrollar el programa bajo un modelo **MVP (Producto Mínimo Viable)**. Esto asegura que el proyecto mantenga un alcance realista y se pueda culminar satisfactoriamente durante el semestre universitario.
 
 ---
 
 ## 📥 Entrada de Datos (Básica y Segura)
 
-Para evitar que el proyecto se vuelva demasiado difícil, el sistema recibirá la información de dos maneras:
+Para evitar la complejidad técnica de integraciones con APIs externas o web scraping en vivo (ej. bots en Discord o Telegram), el sistema recibirá la información de manera unificada:
 
-- 🟢 **Opción A (Recomendada):** Una pantalla web sencilla donde la persona sube manualmente un archivo (`.txt` o `.csv`) con los mensajes copiados de sus chats de trabajo.
-- 🟡 **Opción B (Alternativa):** Un bot sencillo que solo funcione en un programa (como Discord) para guardar los mensajes de un canal.
+- 🟢 **Carga Manual (Web MVP):** Una pantalla web sencilla donde el estudiante sube manualmente el archivo de historial (`.txt` o `.csv`) exportado directamente desde sus chats de trabajo grupal.
 
-> ⚠️ *(Nota: Por ahora, es mejor no conectar programas en vivo como Zoom, Slack y Telegram al mismo tiempo. Así nos aseguramos de poder entregar el proyecto y nos centramos en la parte educativa).*
+> ⚠️ *(Nota: Esta restricción asegura la factibilidad del proyecto para el equipo de desarrollo, eludiendo problemas de tokens en tiempo real, bloqueos de plataformas y políticas de privacidad en tiempo real).*
 
 ---
 
 ## ⚙️ El Motor de SICOCO (Procesamiento)
 
-SICOCO funcionará usando las inteligencias artificiales creadoras de texto que ya existen (como OpenAI, Gemini, Claude). 
+SICOCO funcionará consumiendo las APIs de Inteligencias Artificiales generativas comerciales de bajo costo o capa gratuita (como Gemini o OpenAI). 
 
-- 🤖 **No vamos a crear una IA desde cero.** En lugar de eso, usaremos un sistema basado en darle buenas instrucciones a la IA (Ingeniería de Prompts).
-- 📜 La instrucción principal le dirá a la IA que lea el texto y busque nuestras cuatro partes clave: acuerdos, tareas, desacuerdos y dudas.
+- 🤖 **Enfoque en Ingeniería de Prompts:** No se entrenará una IA desde cero (fine-tuning). Se utilizará un sistema robusto de instrucciones estructuradas.
+- 📜 La instrucción matriz dirigirá al modelo de lenguaje para que extraiga precisamente nuestros cuatro ejes metacognitivos: **acuerdos, tareas, desacuerdos y dudas.**
 
 ---
 
 ## 🖥️ Pantalla para el Usuario (UI)
 
-Haremos una pantalla de resumen sencilla y clara. Mostraremos la información de forma fácil de entender, sin usar gráficos complicados. 
+Se construirá una pantalla de síntesis (Dashboard) estructurada y clara, sin requerir gráficas dinámicas excesivamente complejas. 
 
-> 💡 Lo más importante es mostrar las cuatro partes de la Fase 2 de manera muy visual. Así, cualquier estudiante que no haya estado en la reunión podrá entender lo que pasó de un solo vistazo.
+> 💡 Lo primordial es exponer de manera visual los elementos extraídos, como identificar al autor del acuerdo y enlistar las tareas pendientes, para que cualquier miembro del equipo comprenda el estatus general de un solo vistazo.
