@@ -6,7 +6,7 @@ En este paso definimos qué debe lograr la persona que usa el sistema y qué pro
 
 ## 🎯 La Meta Principal
 
-> **“Resumir y analizar lo que el grupo habla al trabajar en equipo, sirviendo como un andamiaje metacognitivo”.**
+> **“Resumir y analizar lo que el grupo habla al trabajar en equipo, sirviendo como una guía de apoyo”.**
 
 El objetivo general es extraer y ordenar de forma estructurada los puntos más importantes de la discusión para facilitar el aprendizaje colaborativo.
 

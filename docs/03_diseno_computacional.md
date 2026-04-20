@@ -19,7 +19,7 @@ Para evitar la complejidad técnica de integraciones con APIs externas o web scr
 SICOCO funcionará consumiendo las APIs de Inteligencias Artificiales generativas comerciales de bajo costo o capa gratuita (como Gemini o OpenAI). 
 
 - 🤖 **Enfoque en Ingeniería de Prompts:** No se entrenará una IA desde cero (fine-tuning). Se utilizará un sistema robusto de instrucciones estructuradas.
-- 📜 La instrucción matriz dirigirá al modelo de lenguaje para que extraiga precisamente nuestros cuatro ejes metacognitivos: **acuerdos, tareas, desacuerdos y dudas.**
+- 📜 La instrucción principal dirigirá al modelo de lenguaje para que extraiga de forma precisa nuestros cuatro puntos clave: **acuerdos, tareas, desacuerdos y dudas.**
 
 ---
 
