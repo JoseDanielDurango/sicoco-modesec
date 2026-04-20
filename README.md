@@ -34,7 +34,7 @@ La documentación se organiza utilizando el flujo propuesto por la metodología 
 
 | Fase | Descripción | Enlace |
 | :---: | :--- | :--- |
-| **0** | Introducción General | 📖 [Leer Introducción](docs/00_introduccion.md) |
+| **0** | Documento Base (Introducción) | 📖 [Leer Documento Base](docs/00_documento_base.md) |
 | **1** | Diagnóstico *(Análisis de Competencias)* | 🔍 [Fase 1: Diagnóstico](docs/01_diagnostico.md) |
 | **2** | Diseño Pedagógico *(Estrategias Didácticas)* | 🧠 [Fase 2: Diseño](docs/02_diseno_pedagogico.md) |
 | **3** | Diseño Computacional *(Arquitectura Técnica)* | 💻 [Fase 3: Computacional](docs/03_diseno_computacional.md) |
@@ -45,5 +45,5 @@ La documentación se organiza utilizando el flujo propuesto por la metodología 
 ---
 
 <div align="center">
-  <i>💡 Consulta la <a href="docs/00_introduccion.md">Introducción General</a> para más contexto sobre los objetivos y el alcance de este proyecto.</i>
+  <i>💡 Consulta el <a href="docs/00_documento_base.md">Documento Base</a> para más contexto sobre los objetivos y el alcance de este proyecto.</i>
 </div>
