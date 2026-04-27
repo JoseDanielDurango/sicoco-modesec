@@ -13,7 +13,10 @@ SICOCO es una herramienta digital de procesamiento de texto basada en Inteligenc
 
 ## ⚠️ El Problema
 
-El entorno de aprendizaje actual exige que los estudiantes trabajen en equipo utilizando herramientas asíncronas y chats de mensajería (WhatsApp, Discord, Teams). Esto genera una **sobrecarga de información**, provocando que valiosas ideas, debates importantes y acuerdos consensuados se pierdan o se olviden en medio de extensas cadenas de mensajes.
+El entorno de aprendizaje actual exige que los estudiantes trabajen en equipo utilizando herramientas asíncronas y chats de mensajería (WhatsApp, Discord, Teams). Esto genera una **sobrecarga de información**, provocando que valiosas ideas, debates importantes y acuerdos consensuados se pierdan o se olviden en medio de extensas cadenas de mensajes. SICOCO tiene que resolver este problema identificando:
+1. 🗣️ **Qué se dice** y los acuerdos alcanzados.
+2. 👤 **Quién dio cada idea** para validar participaciones.
+3. 🤝 **Cómo el grupo debatió** hasta llegar a la resolución.
 
 ---
 
@@ -26,7 +29,8 @@ Desarrollar un Producto Mínimo Viable (cuyo formato de despliegue está sujeto 
 ## 👥 Usuarios Objetivo
 
 - **🎓 Estudiantes Universitarios y Escolares:** Principales beneficiarios que buscan optimizar su tiempo y no perder el hilo de sus proyectos grupales.
-- **👨‍🏫 Docentes:** Que requieren observar o validar el verdadero nivel de participación, los debates y los consensos a los que llegan los grupos de estudiantes fuera del aula.
+- **👨‍🏫 Docentes / Evaluadores:** Que requieren observar o validar el verdadero nivel de participación, los debates y los consensos a los que llegan los grupos de estudiantes fuera del aula.
+- **💼 Equipos de Trabajo General:** Grupos que trabajan de forma remota y necesitan no olvidar las decisiones del proyecto.
 
 ---
 
@@ -43,26 +47,76 @@ Desarrollar un Producto Mínimo Viable de la herramienta SICOCO que utilice Inte
 
 ---
 
+## 🏗️ Fundamentación Metodológica Integral (Modelo MODESEC)
+
+La fundamentación metodológica del proyecto SICOCO se basa en la integración sinérgica del modelo **MODESEC** (Modelo de Organización de Estrategias para el Desarrollo de Software Educativo por Competencias). Este marco no se limita a una simple guía instruccional, sino que se constituye como un ecosistema de organización pedagógica orientado específicamente al diseño de software educativo basado en competencias, evidencias de aprendizaje y mediaciones tecnológicas.
+
+1. **La Primacía del Aprendizaje:** SICOCO se concibe como un sistema que transforma la opacidad de los chats grupales en un proceso transparente de co-creación, donde cada algoritmo y línea de código están supeditados a objetivos formativos validados. La tecnología deja de ser el fin para convertirse en el medio que hace tangible el progreso intelectual del equipo.
+2. **Principios Orientadores:** El software debe fortalecer la capacidad del estudiante para trabajar de forma colaborativa, identificando acuerdos y resolviendo dudas de manera autónoma. Cada funcionalidad técnica debe generar o procesar una evidencia observable del desempeño del estudiante.
+3. **Framework de Ingeniería:** MODESEC permite segmentar el ciclo de vida del software, priorizando requerimientos que generan evidencias de aprendizaje y alineando la arquitectura de datos con los estándares de calidad educativa y técnica.
+4. **Dominio Técnico-Académico:** Gestión de identidades, roles (docente/estudiante) y organización de cursos.
+5. **Dominio del Procesamiento Pedagógico:** Núcleo de inteligencia donde el motor de IA aplica filtros metodológicos para transformar el contenido desestructurado.
+6. **Dominio de Visualización Educativa:** Diseño de la interfaz gráfica (GUI) para presentar mapas de co-creación y líneas de tiempo.
+7. **El Motor de IA y MODESEC:** Se emplea una ingeniería de prompts robusta basada en las categorías de MODESEC para identificar evidencias específicas de desempeño, minimizando alucinaciones tecnológicas.
+
+---
+
+## 🗺️ Fases del Proyecto (Enfoque MODESEC)
+
+### 🔍 Fase 1: Diagnóstico (Análisis de Competencias)
+En este paso definimos qué debe lograr la persona que usa el sistema y qué problema debe resolver la Inteligencia Artificial. La meta principal es: **“Resumir y analizar lo que el grupo habla al trabajar en equipo, sirviendo como una guía de apoyo”.**
+
+### 🧠 Fase 2: Diseño Pedagógico (Formas de Enseñar)
+SICOCO debe ordenar la información de forma clara. En lugar de dar un resumen aburrido, divide las conclusiones en partes clave:
+1. ✅ **Acuerdos:** Puntos donde el equipo pensó igual y tomó una decisión.
+2. ❌ **Desacuerdos u objeciones:** Opiniones diferentes o debates.
+3. ❓ **Dudas sin resolver:** Preguntas que nadie supo responder al terminar la reunión.
+4. 📋 **Tareas por hacer:** Próximos pasos a seguir y quién tiene que hacerlos.
+
+El resumen debe mostrar, mediante una **línea de tiempo fácil de leer**, cómo fueron cambiando las ideas principales para demostrar el valor del trabajo en equipo.
+
+### 💻 Fase 3: Diseño Computacional (Arquitectura y Fundamentación Tecnológica)
+Este es el plan básico para desarrollar el programa bajo un modelo **MVP (Producto Mínimo Viable)**. 
+- **Entrada de Datos (Básica y Segura):** Se proveerá una interfaz sencilla donde el estudiante ingresará el historial exportado de sus chats de trabajo grupal, evitando la complejidad de integraciones en tiempo real (web scraping, bots).
+- **El Motor de SICOCO (Procesamiento):** Consumirá APIs de Inteligencias Artificiales generativas de bajo costo o capa gratuita (como Gemini o OpenAI). Se utilizará un sistema robusto de instrucciones estructuradas (**Ingeniería de Prompts**), en lugar de entrenar una IA desde cero (fine-tuning).
+- **Pantalla para el Usuario (UI):** Se construirá una interfaz gráfica (Dashboard) estructurada y clara para exponer visualmente los elementos extraídos (autor, tareas pendientes, acuerdos).
+
+### 🛠️ Fase 4: Producción y Desarrollo
+Se programará la interfaz donde el usuario cargará su documento y cómo el backend se conecta a la API de IA. 
+- **Ingeniería de Prompts:** La parte más crítica será perfeccionar las instrucciones para minimizar alucinaciones y extraer información precisa.
+- **Tipos de Textos:** El sistema deberá manejar chats rápidos y cortos (WhatsApp/Telegram) así como foros ordenados y formales, adaptándose al ritmo conversacional.
+
+### 📊 Fase 5: Evaluación (Pruebas de Campo)
+Se evaluará la utilidad educativa mediante tres pruebas controladas:
+1. **Prueba de Precisión (Test Técnico):** Comprobar si el resumen refleja los acuerdos reales y detecta alucinaciones.
+2. **Revisión de Facilidad de Uso (Usabilidad):** Evaluar si la interfaz es agradable, clara y diferencia bien las categorías (Acuerdos, Tareas).
+3. **Prueba de Utilidad Educativa:** Encuestar a los usuarios para saber si el sistema mejoró su comprensión de los objetivos y el trabajo en equipo.
+
+### 🚀 Fase 6: Implementación y Seguimiento
+Pondremos SICOCO a prueba en un curso real (Programa Piloto) por un tiempo definido. Se recopilará la opinión de los usuarios para mejorar el sistema y se contemplan futuras mejoras, como permitir elegir el estilo del resumen (Serio para informes, Rápido para reuniones de seguimiento).
+
+---
+
 ## 🔮 Supuestos
 
-- Se asume que los estudiantes saben exportar o trasladar chats desde sus plataformas de mensajería (ej. WhatsApp) al sistema, independientemente de si finalmente se requiere una carga de archivo o copiar texto directamente.
+- Se asume que los estudiantes saben exportar o trasladar chats desde sus plataformas de mensajería (ej. WhatsApp) al sistema.
 - Se asume que los equipos mantienen una comunicación escrita lo suficientemente clara y estructurada para que una IA identifique intenciones de trabajo.
-- Se cuenta con acceso a APIs de IA generativa (OpenAI, Gemini o similares) bajo los planes gratuitos o en cuotas financiables por estudiantes.
+- Se cuenta con acceso a APIs de IA generativa bajo los planes gratuitos o en cuotas financiables por estudiantes.
 
 ---
 
 ## 🚧 Posibles Riesgos
 
 - **Alucinación de la IA:** Que el modelo de lenguaje genere acuerdos o asigne tareas que el grupo nunca mencionó en realidad.
-- **Resistencia al uso:** Que a los estudiantes les parezca tedioso el proceso de proveer el historial del chat al sistema (por ejemplo, si el formato final exige descargas manuales muy largas).
-- **Mala calidad de datos de entrada:** Que el chat esté lleno de audios, imágenes o stickers, limitando fuertemente el texto que la IA puede procesar y afectando el resumen final.
+- **Resistencia al uso:** Que a los estudiantes les parezca tedioso el proceso de proveer el historial del chat al sistema.
+- **Mala calidad de datos de entrada:** Que el chat esté lleno de audios, imágenes o stickers, limitando fuertemente el texto que la IA puede procesar.
 
 ---
 
 ## ❓ Preguntas Frecuentes (FAQ)
 
 - **¿SICOCO funciona en tiempo real conectado a WhatsApp?**
-  No. Por razones técnicas y de privacidad en este MVP, el historial deberá ser proveído al sistema de manera asíncrona. El método exacto de ingreso (carga de archivo, copy/paste, extensión) aún se encuentra en etapa de diseño y evaluación.
+  No. Por razones técnicas y de privacidad en este MVP, el historial deberá ser proveído al sistema de manera asíncrona.
 - **¿Qué tipo de chats puede analizar?**
   Historiales generados por plataformas de comunicación colaborativa o transcripciones simples. El formato exacto (texto plano, u otros) dependerá de la arquitectura que se termine eligiendo.
 - **¿Es seguro usarlo con tareas de la Universidad?**
@@ -83,10 +137,7 @@ Desarrollar un Producto Mínimo Viable de la herramienta SICOCO que utilice Inte
 **Rol:** Arquitecto de Datos Senior  
 **Objetivo:** Identificar los requerimientos para el modelado de la base de datos relacional del proyecto SICOCO, extrayendo las entidades, atributos y relaciones necesarias.
 
-A continuación, se presentan 20 preguntas que deben realizarse durante la entrevista inicial. Las "Posibles Respuestas" están formuladas directamente para identificar los **tipos de datos y atributos (columnas)** que el sistema debe almacenar.
-
 ### 👥 Bloque 1: Usuarios, Roles y Organización Académica
-
 **1. ¿Qué datos personales y académicos debemos registrar sobre cada estudiante que utilice SICOCO?**
 > 💡 **Posible Respuesta (Datos):** Entidad `Estudiante` necesita almacenar: `ID_Estudiante` (Llave primaria), `Numero_Identidad_Matricula`, `Nombres`, `Apellidos`, `Correo_Institucional`, `Contraseña_Encriptada`, `Semestre_Actual`, `Programa_Academico` (Ej. Lic. en Informática), y `Fecha_Registro`.
 
@@ -103,18 +154,16 @@ A continuación, se presentan 20 preguntas que deben realizarse durante la entre
 > 💡 **Posible Respuesta (Datos):** Sí, se necesita una tabla intermedia `Miembro_Equipo`: `ID_Relacion`, `ID_Estudiante`, `ID_Equipo`, `Rol_En_Equipo` (Ej. Líder, Participante), y `Fecha_Union`.
 
 ### 💬 Bloque 2: Entradas de Datos (Chats y Sesiones de Trabajo)
-
 **6. Cuando un equipo se reúne a discutir un proyecto, ¿qué datos guarda SICOCO de la propia reunión o sesión?**
 > 💡 **Posible Respuesta (Datos):** Entidad `Sesion_Trabajo`: `ID_Sesion`, `ID_Equipo`, `Fecha_Reunion`, `Objetivo_General`, `Plataforma_Origen` (Ej. Discord, Teams, WhatsApp), y `Duracion_Estimada`.
 
 **7. Los usuarios proveen el registro de su chat al sistema. ¿Qué información guardamos sobre este ingreso?**
-> 💡 **Posible Respuesta (Datos):** Entidad `Registro_Chat`: `ID_Registro`, `ID_Sesion`, `Origen_Metadata` (URL, Path o Buffer), `Formato_Entrada` (txt, csv, JSON), `Tamaño_Datos`, y el `ID_Estudiante_Ingresa`. *(Nota: Entidad sujeta a la arquitectura de ingreso final).*
+> 💡 **Posible Respuesta (Datos):** Entidad `Registro_Chat`: `ID_Registro`, `ID_Sesion`, `Origen_Metadata` (URL, Path o Buffer), `Formato_Entrada` (txt, csv, JSON), `Tamaño_Datos`, y el `ID_Estudiante_Ingresa`.
 
 **8. Antes del resumen, ¿es necesario guardar cada mensaje individual del chat en la base de datos por separado?**
 > 💡 **Posible Respuesta (Datos):** Serviría mucho para precisión. Entidad `Mensaje_Original`: `ID_Mensaje`, `ID_Registro`, `Alias_Remitente`, `Cuerpo_Del_Mensaje` (Texto), `Fecha_Hora_Mensaje` (Timestamp).
 
 ### 🤖 Bloque 3: Procesamiento de IA (Ingeniería de Prompts y Motor)
-
 **9. SICOCO utiliza distintos "tonos" o configuraciones para decirle a la IA cómo resumir. ¿Cómo guardamos estas instrucciones maestras (prompts)?**
 > 💡 **Posible Respuesta (Datos):** Entidad `Configuracion_Prompt`: `ID_Configuracion`, `Nombre_Estilo` (Ej. Rápido, Serio/Formal), `Texto_Instruccion_IA`, y `Estado_Activo` (Booleano).
 
@@ -122,7 +171,6 @@ A continuación, se presentan 20 preguntas que deben realizarse durante la entre
 > 💡 **Posible Respuesta (Datos):** Entidad `Resumen_Generado`: `ID_Resumen`, `ID_Sesion`, `Texto_Final_Plano` (por si la vista falla), `Modelo_IA_Usado` (Ej. Gemini-1.5, OpenAI), `Consumo_Tokens`, y `Fecha_Generacion`.
 
 ### 🏗️ Bloque 4: Pilares de Información (Los 4 Puntos Clave de Salida)
-
 **11. Del punto pedagógico, sabemos que debemos capturar "Acuerdos". ¿Qué atributos componen un "Acuerdo"?**
 > 💡 **Posible Respuesta (Datos):** Entidad `Acuerdo_Equipo`: `ID_Acuerdo`, `ID_Resumen`, `Descripcion_Solucion`, `Nivel_Importancia` (Alto/Medio/Bajo), y el/los `Alias_Quien_Propone`.
 
@@ -136,7 +184,6 @@ A continuación, se presentan 20 preguntas que deben realizarse durante la entre
 > 💡 **Posible Respuesta (Datos):** Entidad `Tarea_Asignada`: `ID_Tarea`, `ID_Resumen`, `Titulo_Actividad`, `ID_Estudiante_Asignado` (FK al estudiante), `Estatus` (Pendiente, En Proceso, Hecha), y `Fecha_Limite` o sugerida.
 
 ### 🗺️ Bloque 5: Mapeo de Co-Creación (Línea de Tiempo)
-
 **15. Mencionaste mostrar cómo evolucionan las ideas con una "Línea de tiempo". ¿Cómo guardaremos esta cronología de forma estructurada?**
 > 💡 **Posible Respuesta (Datos):** Entidad `Momento_Clave_Chat`: `ID_Momento`, `ID_Resumen`, `Marca_Tiempo_Aproximada`, `ID_Mensaje_Relacionado`, `Alias_Usuario`, y `Evento` ("Idea Nueva", "Solución", "Pregunta").
 
@@ -144,7 +191,6 @@ A continuación, se presentan 20 preguntas que deben realizarse durante la entre
 > 💡 **Posible Respuesta (Datos):** Puede requerir una Tabla de Relación Recursiva o intermedia `Conexion_Idea`: `ID_Idea_Base`, `ID_Aporte_Extra`, para dibujar cómo las ideas se alimentan mutuamente en la vista.
 
 ### 📈 Bloque 6: Evaluación y Pruebas (Feedback de la Herramienta)
-
 **17. Si hacemos una prueba técnica al resumen (Fase 5), ¿qué información se audita sobre la calidad del resumen?**
 > 💡 **Posible Respuesta (Datos):** Entidad `Control_Calidad_Bot`: `ID_Test`, `ID_Resumen`, `Cantidad_Falsos_Positivos`, `Calificacion_Fidelidad_texto` (Del 1 al 10), y `Comentario_Técnico`.
 
@@ -155,7 +201,6 @@ A continuación, se presentan 20 preguntas que deben realizarse durante la entre
 > 💡 **Posible Respuesta (Datos):** Entidad `Encuesta_Piloto`: `ID_Encuesta`, `ID_Estudiante`, `Mejor_Comprension_Objetivos_Si_No` (Booleano), `Nivel_de_Apoyo_En_Grupo` (Escala Likert 1 al 5), y `Fecha_Respuesta`.
 
 ### 🔒 Bloque 7: Escalabilidad, Privacidad y Seguridad
-
 **20. Como SICOCO alberga los chats de personas y puede escalar a un entorno universitario permanente, ¿qué campos de infraestructura y permisos tenemos para asegurar su privacidad?**
 > 💡 **Posible Respuesta (Datos):** Cada tabla requerirá campos de `Created_At` (Fecha creación) y `Updated_At`. El registro del chat tendrá una bandera `Es_Confidencial` y los equipos de trabajo `Requiere_Aprobacion_Profesor`. Los IDs deben ser encriptados o en formato UUID para evitar fuga o que otros equipos miren los acuerdos de la competencia.
 
@@ -214,4 +259,3 @@ A continuación, se presentan 20 preguntas que deben realizarse durante la entre
 | **EVA-02** | Como estudiante, quiero poder editar manualmente el resumen generado por la IA para corregir pequeños errores antes de guardarlo. | Alta | Must | GUI-01 | Dado un resumen en pantalla.<br>Cuando presiono "Editar"<br>Entonces se abre un campo de texto para corregirlo y guardarlo. |
 | **EVA-03** | Como administrador, quiero un historial de modificaciones para auditar quién cambió un resumen. | Alta | Must | GUI-01 | Dado un cambio en los datos.<br>Cuando se guarda<br>Entonces se actualiza el campo Updated_At y el ID_Editor. |
 | **EVA-04** | Como sistema, quiero restringir el acceso a usuarios no autorizados para proteger la privacidad del grupo. | Alta | Must | PER-04 | Dado un intento de consulta anónima.<br>Cuando se valida el rol<br>Entonces el sistema bloquea la vista si no pertenece al equipo. |
-
