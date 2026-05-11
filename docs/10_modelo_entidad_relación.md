@@ -447,4 +447,4 @@ En `Mensaje_Original` y en varias tablas derivadas (`Acuerdo_Equipo`, `Momento_C
 
 ---
 
-*Documento generado como parte del diseño de base de datos del proyecto SICOCO · Universidad de Córdoba · 2025*
+*Documento generado como parte del diseño de base de datos del proyecto SICOCO · Universidad de Córdoba · 2026*
