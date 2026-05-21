@@ -206,6 +206,31 @@ Pondremos SICOCO a prueba en un curso real (Programa Piloto) por un tiempo defin
 
 ---
 
+## 📊 Comparativa: Modelo Entidad-Relación vs. Entrevista Técnica
+
+Para garantizar la viabilidad y robustez técnica de SICOCO, se presenta un análisis comparativo de correspondencia entre los requerimientos narrados en la **Entrevista Técnica (Arquitectura de Datos)** y la modelación física/lógica expresada en el **Modelo Entidad-Relación (MER)**:
+
+### 1. Matriz de Trazabilidad e Integridad de Datos
+
+| Bloque de la Entrevista | Requerimiento / Preguntas | Entidad(es) Mapeada(s) | Atributos clave del Modelo Relacional |
+| :--- | :--- | :--- | :--- |
+| **Bloque 1:** Usuarios, Roles y Organización | Estudiantes, profesores, cursos, equipos y membresías. | `Estudiante`, `Profesor`, `Curso`, `Equipo`, `Miembro_Equipo` | `Numero_Identidad_Matricula`, `Semestre_Actual`, `Numero_Empleado`, `Permiso_Sistema`, `Codigo_Materia`, `Nombre_Equipo`, `Rol_En_Equipo`. |
+| **Bloque 2:** Entradas de Datos (Chats y Sesiones) | Reuniones lógicas de trabajo, archivos de historial subidos y mensajes crudos de chat. | `Sesion_Trabajo`, `Registro_Chat`, `Mensaje_Original` | `Objetivo_General`, `Plataforma_Origen`, `Origen_Metadata`, `Formato_Entrada`, `Alias_Remitente`, `Cuerpo_Del_Mensaje`. |
+| **Bloque 3:** Procesamiento de IA | Catálogo de instrucciones/prompts maestros y almacenamiento de resúmenes de sesiones. | `Configuracion_Prompt`, `Resumen_Generado` | `Nombre_Estilo`, `Texto_Instruccion_IA`, `Texto_Final_Plano`, `Modelo_IA_Usado`, `Consumo_Tokens`. |
+| **Bloque 4:** Pilares de Información (Salidas IA) | Extracción clasificada de acuerdos, desacuerdos, dudas del grupo y compromisos asignados. | `Acuerdo_Equipo`, `Desacuerdo`, `Duda_Abierta`, `Tarea_Asignada` | `Descripcion_Solucion`, `Nivel_Importancia`, `Tema_Debate`, `Estado_Resolucion`, `Pregunta_Principal`, `Titulo_Actividad`, `Estatus`, `Fecha_Limite`. |
+| **Bloque 5:** Mapeo de Co-Creación | Hitos del chat para la línea de tiempo y la interconexión causal de aportes de ideas. | `Momento_Clave_Chat`, `Conexion_Idea` (auto-relación) | `Marca_Tiempo_Aproximada`, `Evento`, `ID_Idea_Base`, `ID_Aporte_Extra`. |
+| **Bloque 6:** Evaluación y Pruebas | Test de precisión técnica (IA), facilidad de uso (UX) y encuesta piloto de utilidad pedagógica. | `Control_Calidad_Bot`, `Evaluacion_UX`, `Encuesta_Piloto` | `Cantidad_Falsos_Positivos`, `Calificacion_Fidelidad_texto`, `Claridad_Visual`, `Separacion_Vista_Tareas`, `Mejor_Comprension_Objetivos`. |
+| **Bloque 7:** Seguridad y Privacidad | Fechas de auditoría, visibilidad restringida y blindaje lógico. | Todas las tablas del sistema | `Created_At`, `Updated_At`, `Es_Confidencial` (en `Registro_Chat`), `Requiere_Aprobacion_Profesor` (en `Equipo`). |
+
+### 2. Decisiones de Diseño y Ajustes de Ingeniería
+
+El paso de requerimientos narrativos a una base de datos relacional normalizada requirió tres decisiones de arquitectura críticas:
+1. **Desacoplamiento de Remitentes de Chat (`Alias_Remitente` vs. `ID_Estudiante`):** Dado que los chats exportados (WhatsApp/Discord) contienen nombres de usuarios externos no registrados, se almacena `Alias_Remitente` (VARCHAR) en lugar de una FK en mensajes e hitos. Esto evita caídas del sistema y mantiene la flexibilidad. La clave foránea estricta a la tabla `Estudiante` se aplica únicamente en asignaciones directas de la aplicación (como `Tarea_Asignada`).
+2. **Modelado de la Línea de Tiempo de Co-Creación (`Conexion_Idea`):** Para registrar el tejido en el que una idea inicial inspira o detona otra propuesta, se implementó una relación reflexiva muchos a muchos (auto-relación) en la entidad `Momento_Clave_Chat` mediante la tabla intermedia `Conexion_Idea`.
+3. **Auditoría de Carga Independiente (`Registro_Chat`):** Se separó la sesión lógica de trabajo de los archivos físicos cargados. Esto permite registrar múltiples fuentes de chat en una misma reunión, auditando tamaño, formato e identidad del estudiante que realiza la carga sin redundancias.
+
+---
+
 ## 📖 Matriz de Historias de Usuario - Proyecto SICOCO
 
 **Basado en Arquitectura de Datos y Metodología MODESEC**
