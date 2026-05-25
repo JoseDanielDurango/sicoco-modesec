@@ -6,11 +6,11 @@ Este es el plan básico para desarrollar el programa bajo un modelo **MVP (Produ
 
 ## 📥 Entrada de Datos (Básica y Segura)
 
-Para evitar la complejidad técnica de integraciones con APIs externas o web scraping en vivo (ej. bots en Discord o Telegram), el sistema recibirá la información de manera unificada:
+Para evitar la complejidad técnica de bots de Discord o APIs de mensajería empresarial en tiempo real, el sistema recibirá la información a través de la extensión:
 
-- 🟢 **Ingreso de Historiales (Sujeto a Evaluación):** Se proveerá una interfaz sencilla (ya sea una aplicación web, un programa de escritorio local, o una extensión de navegador, aún por definir) donde el estudiante ingresará el historial exportado de sus chats de trabajo grupal.
+- 🟢 **Ingreso de Historiales (Extensión de Navegador):** Se proveerá una interfaz integrada en la extensión de navegador que permitirá a los estudiantes capturar la conversación directamente desde las pestañas web activas (WhatsApp Web, Discord Web, Teams Web) a través de la lectura del DOM, o bien cargar manualmente archivos de historial exportados (txt, csv, JSON).
 
-> ⚠️ *(Nota: Esta restricción asegura la factibilidad del proyecto para el equipo de desarrollo, eludiendo problemas de tokens en tiempo real, bloqueos de plataformas y políticas de privacidad en tiempo real).*
+> ⚠️ *(Nota: Esta restricción asegura la factibilidad del proyecto para el equipo de desarrollo, eludiendo el uso de APIs oficiales complejas o bots que requieran tokens de administrador).*
 
 ---
 

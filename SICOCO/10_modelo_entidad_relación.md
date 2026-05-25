@@ -6,7 +6,7 @@ Universidad de Córdoba · Licenciatura en Informática · Metodología MODESEC
 
 ## 1. Introducción
 
-El presente informe describe formalmente el Modelo Entidad-Relación (MER) del sistema SICOCO. La base de datos está organizada en seis dominios funcionales: gestión de usuarios y roles, organización académica, sesiones de trabajo colaborativo, procesamiento IA y generación de resúmenes, mapeo de co-creación, y evaluación/control de calidad. En total el modelo contempla **18 entidades**, con relaciones de cardinalidad N:1, N:M y 1:1.
+El presente informe describe formalmente el Modelo Entidad-Relación (MER) del sistema SICOCO. La base de datos está organizada en seis dominios funcionales: gestión de usuarios y roles, organización académica, sesiones de trabajo colaborativo, procesamiento IA y generación de resúmenes, mapeo de co-creación, y evaluación/control de calidad. En total el modelo contempla **19 entidades**, con relaciones de cardinalidad N:1, N:M y 1:1.
 
 ---
 

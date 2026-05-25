@@ -22,7 +22,7 @@ El entorno de aprendizaje actual exige que los estudiantes trabajen en equipo ut
 
 ## 💡 La Solución Propuesta
 
-Desarrollar un Producto Mínimo Viable (cuyo formato de despliegue está sujeto a evaluación técnica y podría ser una app web, un programa local, una extensión, etc.) que permita a los estudiantes ingresar sus historiales de chat grupal y utilizar Inteligencia Artificial para extraer de forma estructurada los puntos más importantes de la discusión, categorizándolos visualmente.
+Desarrollar un Producto Mínimo Viable en formato de **extensión de navegador** (compatible con navegadores basados en Chromium) que permita a los estudiantes capturar directamente de la web o cargar de forma asíncrona sus historiales de chat grupal, utilizando Inteligencia Artificial para extraer de forma estructurada los puntos más importantes de la discusión y categorizándolos visualmente.
 
 ---
 
@@ -76,13 +76,13 @@ SICOCO debe ordenar la información de forma clara. En lugar de dar un resumen a
 El resumen debe mostrar, mediante una **línea de tiempo fácil de leer**, cómo fueron cambiando las ideas principales para demostrar el valor del trabajo en equipo.
 
 ### 💻 Fase 3: Diseño Computacional (Arquitectura y Fundamentación Tecnológica)
-Este es el plan básico para desarrollar el programa bajo un modelo **MVP (Producto Mínimo Viable)**. 
-- **Entrada de Datos (Básica y Segura):** Se proveerá una interfaz sencilla donde el estudiante ingresará el historial exportado de sus chats de trabajo grupal, evitando la complejidad de integraciones en tiempo real (web scraping, bots).
+Este es el plan básico para desarrollar el programa bajo un modelo **MVP (Producto Mínimo Viable)** en formato de **extensión de navegador**.
+- **Entrada de Datos (Básica y Segura):** Se proveerá una interfaz integrada en la extensión que permitirá a los estudiantes capturar el historial de chats directamente desde las pestañas web activas (WhatsApp Web, Discord, Teams) a través de la lectura del DOM, o bien cargar manualmente archivos de historial exportados (txt, csv, JSON).
 - **El Motor de SICOCO (Procesamiento):** Consumirá APIs de Inteligencias Artificiales generativas de bajo costo o capa gratuita (como Gemini o OpenAI). Se utilizará un sistema robusto de instrucciones estructuradas (**Ingeniería de Prompts**), en lugar de entrenar una IA desde cero (fine-tuning).
-- **Pantalla para el Usuario (UI):** Se construirá una interfaz gráfica (Dashboard) estructurada y clara para exponer visualmente los elementos extraídos (autor, tareas pendientes, acuerdos).
+- **Pantalla para el Usuario (UI):** Se construirá una interfaz gráfica integrada en la extensión (Dashboard) estructurada y clara para exponer visualmente los elementos extraídos (autor, tareas pendientes, acuerdos).
 
 ### 🛠️ Fase 4: Producción y Desarrollo
-Se programará la interfaz donde el usuario cargará su documento y cómo el backend se conecta a la API de IA. 
+Se programará la interfaz gráfica de la extensión, la lógica de lectura del DOM de las pestañas web y cómo el backend se conecta a la API de IA.
 - **Ingeniería de Prompts:** La parte más crítica será perfeccionar las instrucciones para minimizar alucinaciones y extraer información precisa.
 - **Tipos de Textos:** El sistema deberá manejar chats rápidos y cortos (WhatsApp/Telegram) así como foros ordenados y formales, adaptándose al ritmo conversacional.
 
@@ -116,9 +116,9 @@ Pondremos SICOCO a prueba en un curso real (Programa Piloto) por un tiempo defin
 ## ❓ Preguntas Frecuentes (FAQ)
 
 - **¿SICOCO funciona en tiempo real conectado a WhatsApp?**
-  No. Por razones técnicas y de privacidad en este MVP, el historial deberá ser proveído al sistema de manera asíncrona.
+  No. Por razones de viabilidad y privacidad en este MVP, se requiere capturar la conversación de forma voluntaria a través de la extensión o cargar el archivo de chat.
 - **¿Qué tipo de chats puede analizar?**
-  Historiales generados por plataformas de comunicación colaborativa o transcripciones simples. El formato exacto (texto plano, u otros) dependerá de la arquitectura que se termine eligiendo.
+  Historiales generados por plataformas de comunicación colaborativa (WhatsApp, Discord, Teams) ya sea capturando el DOM desde su interfaz web mediante la extensión o cargando archivos de conversación (.txt, .csv, .json).
 - **¿Es seguro usarlo con tareas de la Universidad?**
   Sí, SICOCO procesará el texto sin almacenar datos sensibles por tiempo indefinido, enfocándose puramente en la extracción de aprendizaje.
 
@@ -284,3 +284,62 @@ El paso de requerimientos narrativos a una base de datos relacional normalizada 
 | **EVA-02** | Como estudiante, quiero poder editar manualmente el resumen generado por la IA para corregir pequeños errores antes de guardarlo. | Alta | Must | GUI-01 | Dado un resumen en pantalla.<br>Cuando presiono "Editar"<br>Entonces se abre un campo de texto para corregirlo y guardarlo. |
 | **EVA-03** | Como administrador, quiero un historial de modificaciones para auditar quién cambió un resumen. | Alta | Must | GUI-01 | Dado un cambio en los datos.<br>Cuando se guarda<br>Entonces se actualiza el campo Updated_At y el ID_Editor. |
 | **EVA-04** | Como sistema, quiero restringir el acceso a usuarios no autorizados para proteger la privacidad del grupo. | Alta | Must | PER-04 | Dado un intento de consulta anónima.<br>Cuando se valida el rol<br>Entonces el sistema bloquea la vista si no pertenece al equipo. |
+
+---
+
+## 💻 Desarrollo Técnico
+
+### 1. Objetivo del Sistema
+El objetivo de **SICOCO** es servir como una herramienta digital de procesamiento de texto basada en **Inteligencia Artificial** diseñada para analizar, clasificar y resumir transcripciones de chats y foros de trabajo grupal. El sistema busca transformar la opacidad de las discusiones asíncronas en un proceso transparente de co-creación, permitiendo a los estudiantes visualizar cómo colaboran y facilitando el seguimiento docente bajo la metodología **MODESEC**.
+
+### 2. Perfiles de Usuario
+*   **Estudiante (Usuario Principal):** Responsable de ingresar los historiales de chat, visualizar los resúmenes, gestionar sus tareas asignadas y evaluar la utilidad de la herramienta.
+*   **Docente / Evaluador:** Vinculado a asignaturas para supervisar los niveles de participación, validar consensos alcanzados por los equipos y calificar la fidelidad técnica del sistema.
+*   **Administrador:** Encargado de la gestión de roles, mantenimiento técnico y seguridad global de la infraestructura de datos.
+
+### 3. Funcionalidades del Software (MVP)
+El despliegue final se ha definido como una **extensión de navegador** (compatible con navegadores basados en Chromium) para facilitar la captura e importación directa de datos desde plataformas de mensajería en sus versiones web.
+
+#### A) Módulo de Captura y Procesamiento (IA)
+*   **Captura Directa e Ingreso de Historiales:** Capacidad para capturar y extraer mensajes directamente desde la interfaz web de plataformas de mensajería (WhatsApp Web, Discord Web, Teams Web) leyendo el DOM de la pestaña activa en el navegador. Asimismo, permite la carga de archivos de chat exportados (txt, csv, JSON) de forma asíncrona.
+*   **Motor de SICOCO:** Consumo de APIs de IA generativa (Gemini/OpenAI) mediante una **Ingeniería de Prompts** robusta para minimizar alucinaciones.
+*   **Categorización Pedagógica:** Identificación automática de cuatro ejes fundamentales:
+    *   **Acuerdos:** Puntos de consenso y decisiones tomadas.
+    *   **Desacuerdos:** Posturas encontradas y debates en curso.
+    *   **Dudas:** Interrogantes sin resolver al finalizar la sesión.
+    *   **Tareas (To-Do):** Compromisos, responsables y fechas límite.
+
+#### B) Visualización y Dashboard (GUI)
+*   **Línea de Tiempo de Co-creación:** Representación visual de cómo evolucionaron las ideas y los hitos cronológicos del equipo.
+*   **Identificación de Autores:** Reconocimiento de quién aportó cada idea o solución para validar la participación individual.
+*   **Estilos de Resumen:** Opción de elegir entre un tono "Serio" (para informes) o "Rápido" (para seguimiento directo).
+*   **Edición Manual:** Permite al estudiante corregir errores del resumen generado antes del almacenamiento final.
+
+### 4. Arquitectura de Datos (Modelo Relacional)
+El sistema se organiza en **6 dominios funcionales** con un total de **19 entidades**:
+
+*   **Dominio Técnico-Académico:** Tablas de *Estudiante*, *Profesor*, *Curso*, *Equipo* y *Miembro_Equipo* para gestionar identidades y jerarquías.
+*   **Sesiones de Trabajo:** *Sesion_Trabajo*, *Registro_Chat* y *Mensaje_Original* para auditar el insumo crudo.
+*   **Procesamiento IA:** *Configuracion_Prompt* y *Resumen_Generado* para manejar la lógica del motor de IA.
+*   **Pilares de Información:** Entidades específicas para *Acuerdo_Equipo*, *Desacuerdo*, *Duda_Abierta* y *Tarea_Asignada*.
+*   **Mapeo de Co-creación:** *Momento_Clave_Chat* y la tabla recursiva *Conexion_Idea* para construir el grafo de interacciones.
+*   **Evaluación y Calidad:** *Control_Calidad_Bot*, *Evaluacion_UX* y *Encuesta_Piloto* para medir el impacto educativo y técnico.
+
+### 5. Flujos Críticos
+1.  **Procesamiento de Chat:** El estudiante captura el chat vía extensión -> La IA categoriza mensajes -> Se genera un resumen estructurado en el Dashboard.
+2.  **Seguimiento Docente:** El docente accede al curso -> Revisa los acuerdos y tareas de los equipos -> Evalúa la fidelidad del resumen frente al chat original.
+
+### 6. Requisitos No Funcionales y Seguridad
+*   **Privacidad:** Blindaje lógico de accesos; los estudiantes solo ven material de sus equipos respectivos.
+*   **Auditoría:** Campos obligatorios de `Created_At` y `Updated_At` en todas las tablas para trazabilidad de cambios.
+*   **Integridad:** Uso de UUIDs para identificadores sensibles y encriptación de contraseñas mediante hash.
+*   **Escalabilidad:** Desacoplamiento de remitentes (Alias) para permitir el procesamiento de usuarios externos no registrados en la plataforma.
+
+### 7. Roadmap de Desarrollo (Fases MODESEC)
+1.  **Diagnóstico:** Definición de competencias y problemas de sobrecarga informativa (Completado).
+2.  **Diseño Pedagógico:** Estructuración de categorías (Acuerdos, Tareas, etc.) y diseño de línea de tiempo (Completado).
+3.  **Diseño Computacional:** Definición de arquitectura de extensión de navegador y modelo ER (En curso).
+4.  **Producción y Desarrollo:** Programación del frontend (extensión), backend e ingeniería de prompts.
+5.  **Evaluación:** Pruebas de precisión técnica, usabilidad (UX) y utilidad educativa.
+6.  **Implementación:** Programa piloto en cursos reales de la Universidad de Córdoba.
+

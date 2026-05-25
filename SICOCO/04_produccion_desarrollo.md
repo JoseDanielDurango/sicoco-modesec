@@ -1,6 +1,6 @@
 # 🛠️ Fase 4: Producción y Desarrollo
 
-En esta etapa vamos a crear el primer modelo real del programa, ensamblando la interfaz gráfica (MVP, con plataforma de despliegue aún por definir) con el motor de Inteligencia Artificial.
+En esta etapa vamos a crear el primer modelo real del programa, ensamblando la interfaz gráfica de la **extensión de navegador** (MVP) con el motor de Inteligencia Artificial.
 
 ---
 
