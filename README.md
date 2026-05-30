@@ -1,7 +1,6 @@
-<div align="center">
-  <h1>🧠 SICOCO: Sintetizador de Co-creación Colaborativa</h1>
-  <p><b>Herramienta guiada bajo la metodología MODESEC, enfocada no solo como herramienta técnica de resumen, sino como recurso pedagógico para el aprendizaje colaborativo.</b></p>
-</div>
+# 🧠 SICOCO: Sintetizador de Co-creación Colaborativa
+
+**Herramienta guiada bajo la metodología MODESEC, enfocada no solo como herramienta técnica de resumen, sino como recurso pedagógico para el aprendizaje colaborativo.**
 
 ---
 
@@ -66,6 +65,4 @@ La documentación se organiza utilizando el flujo propuesto por la metodología 
 
 ---
 
-<div align="center">
-  <i>💡 Consulta el <a href="SICOCO/00_documento_base.md">Documento Base</a> para más contexto sobre los objetivos y el alcance de este proyecto.</i>
-</div>
+*💡 Consulta el [Documento Base](SICOCO/00_documento_base.md) para más contexto sobre los objetivos y el alcance de este proyecto.*
