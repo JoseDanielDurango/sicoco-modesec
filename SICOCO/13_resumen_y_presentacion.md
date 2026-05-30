@@ -44,7 +44,7 @@ El diseño del proyecto es el resultado de un flujo colaborativo e iterativo ent
 * **Matrices de Trazabilidad:** Comparar de forma automatizada las preguntas de requerimientos con el modelo físico de base de datos.
 * **Especificaciones Técnicas:** Traducir las necesidades pedagógicas a componentes de software y flujos lógicos de APIs de lenguaje de gran tamaño (LLM).
 
-### 👥 Lo que añadieron tú y tu equipo de compañeros (Manualmente)
+### 👥 Lo que añadió el equipo de trabajos (Manualmente)
 
 * **Refinamiento de Contenido:** Contextualizar las definiciones del proyecto a la realidad de la Licenciatura en Informática con énfasis en Medios Audiovisuales de la Universidad de Córdoba.
 * **Estilo y Formato (Prettier):** Corregir, limpiar y dar formato markdown uniforme a todos los archivos para asegurar que la visualización final sea limpia.
