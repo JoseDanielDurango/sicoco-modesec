@@ -46,7 +46,7 @@ El diseño del proyecto es el resultado de un flujo colaborativo e iterativo ent
 
 ### 👥 Lo que añadió el equipo de trabajo (Manualmente)
 
-* **Refinamiento de Contenido:** Contextualizar las definiciones del proyecto a la realidad de la Licenciatura en Informática con énfasis en Medios Audiovisuales de la Universidad de Córdoba.
+* **Refinamiento de Contenido:** Contextualizar las definiciones del proyecto a nuestra realidad.
 * **Estilo y Formato (Prettier):** Corregir, limpiar y dar formato markdown uniforme a todos los archivos para asegurar que la visualización final sea limpia.
 * **Ajuste de Errores y Nomenclatura:** Corregir inconsistencias de nombres en el diseño de datos, ajustar nombres de directorios e incorporar los recursos visuales del modelado de datos (`Modelo Relacion - Entidad V2.png`, `DBDiagram.png`, `Modelo Relacion - Entidad V2pdf.pdf`).
 * **Justificación de Decisiones:** Validar y refinar las implicaciones del proyecto para asegurar su aplicabilidad real en la materia Diseño y Desarrollo de Software Educativo I.
