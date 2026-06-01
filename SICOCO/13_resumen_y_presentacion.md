@@ -76,29 +76,3 @@ El modelado de datos estructurado para soportar el procesamiento está listo e i
 * **Área de Resultados:** `Acuerdo_Equipo`, `Desacuerdo`, `Duda_Abierta`, `Tarea_Asignada`.
 * **Área de Visualización (Línea de Tiempo):** `Momento_Clave_Chat` y la tabla reflexiva `Conexion_Idea` (auto-relación para conectar qué ideas se alimentan de otras).
 * **Área de Evaluación y UX:** `Control_Calidad_Bot`, `Evaluacion_UX`, `Encuesta_Piloto`.
-
----
-
-## 🎤 4. Guion de Exposición Rápida (Pitch de 5 Minutos)
-
-Utiliza este guion estructurado para tu defensa del proyecto:
-
-### ⏱️ Minuto 1: Introducción y El Problema
->
-> *"Buenos días. Nuestro proyecto es SICOCO, una propuesta diseñada bajo la metodología MODESEC. En la educación actual, los estudiantes realizan gran parte de su trabajo grupal en chats asíncronos como WhatsApp o Discord. Sin embargo, esto genera una sobrecarga de información donde las ideas valiosas y los compromisos se pierden en extensas cadenas de mensajes. SICOCO nace para estructurar pedagógicamente estas interacciones."*
-
-### ⏱️ Minuto 2: La Metodología y Enfoque Pedagógico
->
-> *"SICOCO no se concibe como un simple resumidor de texto comercial. Bajo la guía de MODESEC, su objetivo es extraer evidencias de aprendizaje del trabajo colaborativo. El diseño se enfoca en clasificar la información en cuatro pilares: acuerdos alcanzados, desacuerdos surgidos, dudas sin resolver y tareas asignadas. De esta forma, el docente puede realizar un seguimiento formativo real y los estudiantes pueden reflexionar sobre su propio proceso de co-creación."*
-
-### ⏱️ Minuto 3: Arquitectura y Diseño de la Base de Datos
->
-> *"Para dar soporte a esta lógica, diseñamos una base de datos normalizada con 19 tablas. Tomamos tres decisiones críticas en el diseño: Primero, desacoplamos los remitentes del chat original mediante aliases para procesar mensajes de usuarios no registrados sin vulnerar la integridad de la base de datos. Segundo, creamos una relación recursiva en los momentos clave para poder rastrear cronológicamente cómo una idea inspira a otra. Y tercero, incorporamos tablas de control de calidad del bot y encuestas para validar la utilidad del sistema."*
-
-### ⏱️ Minuto 4: Planificación Técnica y el MVP del Próximo Semestre
->
-> *"La arquitectura técnica propone implementar SICOCO en el futuro como una extensión de navegador. El flujo diseñado establece que la extensión leerá el DOM de las pestañas web activas (por ejemplo, WhatsApp Web), limpiará el texto, lo enviará con una ingeniería de prompts estructurada a la API de un modelo de lenguaje (como Gemini o GPT) y finalmente poblará la base de datos para mostrar los resultados en un Dashboard interactivo."*
-
-### ⏱️ Minuto 5: Estado Actual y Conclusión
->
-> *"Queremos aclarar que el alcance logrado este semestre corresponde al 100% de la fase de planificación y diseño documental que se encuentra en nuestro GitHub. No hay un prototipo funcional programado aún; en su lugar, hemos construido los cimientos teóricos, instruccionales y relacionales del sistema. Con este diseño consolidado como hoja de ruta, iniciaremos la programación y el desarrollo del MVP el próximo semestre. Muchas gracias, quedamos abiertos a sus preguntas."*
