@@ -11,6 +11,19 @@ SICOCO es una herramienta digital de procesamiento de texto basada en Inteligenc
 
 ---
 
+## 🤝 ¿Por qué Co-Creación?
+
+SICOCO se define fundamentalmente como una plataforma de **co-creación** y no meramente de **creación** (ya sea individual o grupal tradicional). Mientras que las herramientas convencionales de creación se limitan a proporcionar un espacio para redactar un producto final, SICOCO interviene de manera activa y pedagógica en el proceso constructivo que da origen a dicho producto.
+
+Bajo el marco metodológico **MODESEC**, el software se cataloga como una herramienta de co-creación por las siguientes razones esenciales:
+
+1. **Trazabilidad y Evolución de las Ideas (El Tejido Colectivo):** En una herramienta de creación simple, el resultado borra los debates intermedios. SICOCO, en cambio, mapea la evolución del pensamiento grupal. Mediante el *Mapeo de Co-Creación* (reflejado en el modelo relacional con la auto-relación `Conexion_Idea`), el sistema registra de manera cronológica cómo las ideas iniciales propuestas por un miembro del equipo se conectan, complementan o transforman con las intervenciones de otros compañeros.
+2. **Foco en el Diálogo y la Negociación Pedagógica:** La co-creación requiere diálogo y confrontación constructiva de saberes. SICOCO procesa y categoriza explícitamente no solo los **Acuerdos**, sino también los **Desacuerdos** y las **Dudas abiertas**. Esto visibiliza la negociación de significados del grupo, demostrando que el conocimiento educativo es el resultado de un consenso dinámico y no de una simple asignación monótona de tareas.
+3. **El Rol Mediador de la Inteligencia Artificial:** En este sistema, la IA no crea el contenido por el estudiante, sino que actúa como un espejo metacognitivo que le devuelve al equipo la estructura lógica de su propia discusión. Al clasificar los aportes, la IA facilita que los co-creadores (estudiantes y docentes) reflexionen sobre el curso de su colaboración, tomen control de su propio aprendizaje y afinen su trabajo.
+4. **Visibilización de la Agencia y la Corresponsabilidad:** La co-creación pone en valor el aporte singular de cada individuo al logro común. A través del registro de alias y autores integrados en el dashboard y las líneas de tiempo, SICOCO valida la autoría intelectual de cada estudiante, demostrando cómo la suma interactiva y complementaria de los aportes de todos los miembros del equipo define el éxito del proyecto.
+
+---
+
 ## ⚠️ El Problema
 
 El entorno de aprendizaje actual exige que los estudiantes trabajen en equipo utilizando herramientas asíncronas y chats de mensajería (WhatsApp, Discord, Teams). Esto genera una **sobrecarga de información**, provocando que valiosas ideas, debates importantes y acuerdos consensuados se pierdan o se olviden en medio de extensas cadenas de mensajes. SICOCO tiene que resolver este problema identificando:
@@ -322,7 +335,8 @@ El objetivo de **SICOCO** es servir como una herramienta digital de procesamient
 
 ### 2. Perfiles de Usuario
 
-* **Estudiante (Usuario Principal):** Responsable de ingresar los historiales de chat, visualizar los resúmenes, gestionar sus tareas asignadas y evaluar la utilidad de la herramienta.
+- **Estudiante (Usuario Principal):** Responsable de ingresar los historiales de chat, visualizar los resúmenes, gestionar sus tareas asignadas y evaluar la utilidad de la herramienta.
+
 - **Docente / Evaluador:** Vinculado a asignaturas para supervisar los niveles de participación, validar consensos alcanzados por los equipos y calificar la fidelidad técnica del sistema.
 - **Administrador:** Encargado de la gestión de roles, mantenimiento técnico y seguridad global de la infraestructura de datos.
 
@@ -332,7 +346,8 @@ El despliegue final se ha definido como una **extensión de navegador** (compati
 
 #### A) Módulo de Captura y Procesamiento (IA)
 
-* **Captura Directa e Ingreso de Historiales:** Capacidad para capturar y extraer mensajes directamente desde la interfaz web de plataformas de mensajería (WhatsApp Web, Discord Web, Teams Web) leyendo el DOM de la pestaña activa en el navegador. Asimismo, permite la carga de archivos de chat exportados (txt, csv, JSON) de forma asíncrona.
+- **Captura Directa e Ingreso de Historiales:** Capacidad para capturar y extraer mensajes directamente desde la interfaz web de plataformas de mensajería (WhatsApp Web, Discord Web, Teams Web) leyendo el DOM de la pestaña activa en el navegador. Asimismo, permite la carga de archivos de chat exportados (txt, csv, JSON) de forma asíncrona.
+
 - **Motor de SICOCO:** Consumo de APIs de IA generativa (Gemini/OpenAI) mediante una **Ingeniería de Prompts** robusta para minimizar alucinaciones.
 - **Categorización Pedagógica:** Identificación automática de cuatro ejes fundamentales:
   - **Acuerdos:** Puntos de consenso y decisiones tomadas.
@@ -342,7 +357,8 @@ El despliegue final se ha definido como una **extensión de navegador** (compati
 
 #### B) Visualización y Dashboard (GUI)
 
-* **Línea de Tiempo de Co-creación:** Representación visual de cómo evolucionaron las ideas y los hitos cronológicos del equipo.
+- **Línea de Tiempo de Co-creación:** Representación visual de cómo evolucionaron las ideas y los hitos cronológicos del equipo.
+
 - **Identificación de Autores:** Reconocimiento de quién aportó cada idea o solución para validar la participación individual.
 - **Estilos de Resumen:** Opción de elegir entre un tono "Serio" (para informes) o "Rápido" (para seguimiento directo).
 - **Edición Manual:** Permite al estudiante corregir errores del resumen generado antes del almacenamiento final.
@@ -365,7 +381,8 @@ El sistema se organiza en **6 dominios funcionales** con un total de **19 entida
 
 ### 6. Requisitos No Funcionales y Seguridad
 
-* **Privacidad:** Blindaje lógico de accesos; los estudiantes solo ven material de sus equipos respectivos.
+- **Privacidad:** Blindaje lógico de accesos; los estudiantes solo ven material de sus equipos respectivos.
+
 - **Auditoría:** Campos obligatorios de `Created_At` y `Updated_At` en todas las tablas para trazabilidad de cambios.
 - **Integridad:** Uso de UUIDs para identificadores sensibles y encriptación de contraseñas mediante hash.
 - **Escalabilidad:** Desacoplamiento de remitentes (Alias) para permitir el procesamiento de usuarios externos no registrados en la plataforma.
@@ -421,14 +438,16 @@ El diseño final del proyecto representa una labor conjunta de ingeniería y ref
 
 #### 🤖 Colaboración de la IA (Antigravity)
 
-* **Generación de Estructuras Base:** Modelado inicial conforme a las fases del framework MODESEC.
+- **Generación de Estructuras Base:** Modelado inicial conforme a las fases del framework MODESEC.
+
 - **Modelo Relacional Lógico (DBML):** Normalización de las 19 entidades y diseño del código DBML (`diagrama_bd.dbml`), asegurando que las tablas como `Configuracion_Prompt` quedaran integradas sin desconexiones lógicas.
 - **Matrices de Trazabilidad:** Cruce automatizado para corroborar la alineación del diseño físico con los requisitos de la entrevista.
 - **Especificaciones Técnicas:** Conversión de conceptos pedagógicos en atributos de base de datos y flujos lógicos con APIs de lenguaje (LLM).
 
 #### 👥 Aportes del Equipo de Trabajo (Manual)
 
-* **Contextualización y Refinamiento:** Ajuste y adecuación de las definiciones y problemáticas a la realidad institucional y académica del 8vo semestre.
+- **Contextualización y Refinamiento:** Ajuste y adecuación de las definiciones y problemáticas a la realidad institucional y académica del 8vo semestre.
+
 - **Consistencia de Estilo (Prettier):** Formateo estricto del lenguaje markdown para una lectura uniforme en todos los documentos.
 - **Corrección de Errores e Integración Visual:** Depuración de la nomenclatura en los modelos de datos y vinculación de archivos gráficos del diseño (`Modelo Relacion - Entidad V2.png`, `DBDiagram.png`, `Modelo Relacion - Entidad V2pdf.pdf`).
 - **Justificación de Decisiones:** Selección final de los perfiles de usuario, riesgos del entorno académico local y validación pedagógica para la materia.
