@@ -66,19 +66,20 @@ La fundamentación metodológica del proyecto SICOCO se basa en la integración 
 ### 🔍 Fase 1: Diagnóstico (Análisis de Competencias)
 En este paso definimos qué debe lograr la persona que usa el sistema y qué problema debe resolver la Inteligencia Artificial. La meta principal es: **“Resumir y analizar lo que el grupo habla al trabajar en equipo, sirviendo como una guía de apoyo”.**
 
-### 🧠 Fase 2: Diseño Pedagógico (Formas de Enseñar)
+### 🧠 Fase 2: Diseño Pedagógico y Planificación (Formas de Enseñar y Planificar)
 SICOCO debe ordenar la información de forma clara. En lugar de dar un resumen aburrido, divide las conclusiones en partes clave:
 1. ✅ **Acuerdos:** Puntos donde el equipo pensó igual y tomó una decisión.
 2. ❌ **Desacuerdos u objeciones:** Opiniones diferentes o debates.
 3. ❓ **Dudas sin resolver:** Preguntas que nadie supo responder al terminar la reunión.
 4. 📋 **Tareas por hacer:** Próximos pasos a seguir y quién tiene que hacerlos.
 
-El resumen debe mostrar, mediante una **línea de tiempo fácil de leer**, cómo fueron cambiando las ideas principales para demostrar el valor del trabajo en equipo.
+El resumen debe mostrar, mediante una **línea de tiempo fácil de leer**, cómo fueron cambiando las ideas principales para demostrar el valor del trabajo en equipo. Además, en esta fase se estructuran las entrevistas de requerimientos con el arquitecto de datos y se definen las historias de usuario y sus criterios de aceptación.
 
-### 💻 Fase 3: Diseño Computacional (Arquitectura y Fundamentación Tecnológica)
+### 💻 Fase 3: Diseño Computacional y Técnico (Arquitectura, Modelado y Fundamentación Tecnológica)
 Este es el plan básico para desarrollar el programa bajo un modelo **MVP (Producto Mínimo Viable)** en formato de **extensión de navegador**.
 - **Entrada de Datos (Básica y Segura):** Se proveerá una interfaz integrada en la extensión que permitirá a los estudiantes capturar el historial de chats directamente desde las pestañas web activas (WhatsApp Web, Discord, Teams) a través de la lectura del DOM, o bien cargar manualmente archivos de historial exportados (txt, csv, JSON).
-- **El Motor de SICOCO (Procesamiento):** Consumirá APIs de Inteligencias Artificiales generativas de bajo costo o capa gratuita (como Gemini o OpenAI). Se utilizará un sistema robusto de instrucciones estructuradas (**Ingeniería de Prompts**), en lugar de entrenar una IA desde cero (fine-tuning).
+- **Modelado de Datos (MER):** Se diseña la estructura lógica-física de la base de datos relacional (19 tablas normalizadas) para garantizar la integridad referencial y el almacenamiento del procesamiento de IA.
+- **El Motor de SICOCO (Desarrollo Técnico):** Consumirá APIs de Inteligencias Artificiales generativas de bajo costo o capa gratuita (como Gemini o OpenAI). Se utilizará un sistema robusto de instrucciones estructuradas (**Ingeniería de Prompts**), en lugar de entrenar una IA desde cero (fine-tuning).
 - **Pantalla para el Usuario (UI):** Se construirá una interfaz gráfica integrada en la extensión (Dashboard) estructurada y clara para exponer visualmente los elementos extraídos (autor, tareas pendientes, acuerdos).
 
 ### 🛠️ Fase 4: Producción y Desarrollo
@@ -337,8 +338,8 @@ El sistema se organiza en **6 dominios funcionales** con un total de **19 entida
 
 ### 7. Roadmap de Desarrollo (Fases MODESEC)
 1.  **Diagnóstico:** Definición de competencias y problemas de sobrecarga informativa (Completado).
-2.  **Diseño Pedagógico:** Estructuración de categorías (Acuerdos, Tareas, etc.) y diseño de línea de tiempo (Completado).
-3.  **Diseño Computacional:** Definición de arquitectura de extensión de navegador y modelo ER (En curso).
+2.  **Diseño Pedagógico y Planificación:** Estructuración de categorías (Acuerdos, Tareas, etc.), entrevistas de requerimientos e historias de usuario (Completado).
+3.  **Diseño Computacional y Técnico:** Modelos de entidad-relación (MER), diseño del desarrollo técnico y arquitectura del MVP (Completado).
 4.  **Producción y Desarrollo:** Programación del frontend (extensión), backend e ingeniería de prompts.
 5.  **Evaluación:** Pruebas de precisión técnica, usabilidad (UX) y utilidad educativa.
 6.  **Implementación:** Programa piloto en cursos reales de la Universidad de Córdoba.

@@ -1,4 +1,4 @@
-# 💻 Fase 3: Diseño Computacional (Arquitectura Técnica)
+# 💻 Fase 3: Diseño Computacional y Técnico (Arquitectura y Modelado)
 
 Este es el plan básico para desarrollar el programa bajo un modelo **MVP (Producto Mínimo Viable)**. Esto asegura que el proyecto mantenga un alcance realista y se pueda culminar satisfactoriamente durante el semestre universitario.
 

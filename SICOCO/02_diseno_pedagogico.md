@@ -1,4 +1,4 @@
-# 🧠 Fase 2: Diseño Pedagógico (Formas de Enseñar)
+# 🧠 Fase 2: Diseño Pedagógico y Planificación (Formas de Enseñar)
 
 En este paso explicamos **cómo** el programa facilitará el aprendizaje. Es decir, cómo hacemos que nuestra meta se convierta en acciones claras, evitando que SICOCO solo copie y pegue texto.
 

@@ -13,8 +13,13 @@ El proyecto se estructuró siguiendo estrictamente la metodología **MODESEC** (
 ```mermaid
 graph TD
     subgraph S1 ["Semestre 1: Diseño y Planificación (Completado)"]
-        F1["Fase 1: Diagnóstico<br>(Problemática de sobrecarga y competencias)"] --> F2["Fase 2: Diseño Pedagógico<br>(Definición de Acuerdos, Dudas, Tareas, Desacuerdos)"]
-        F2 --> F3["Fase 3: Diseño Computacional<br>(Requerimientos, MER, Historias y Trazabilidad)"]
+        F1["Fase 1: Diagnóstico<br>(Problemática de sobrecarga y competencias)"] --> F2["Fase 2: Diseño Pedagógico y Planificación<br>(Acuerdos, Dudas, Tareas, Desacuerdos, Entrevistas e Historias de Usuario)"]
+        F2 --> F3["Fase 3: Diseño Computacional y Técnico<br>(Modelos de Entidad-Relación y Desarrollo Técnico)"]
+    end
+    subgraph S2 ["Semestre 2: Construcción y Validación (Próximo Semestre)"]
+        F3 --> F4["Fase 4: Producción y Desarrollo<br>(Programación de la extensión, backend y prompts)"]
+        F4 --> F5["Fase 5: Evaluación<br>(Pruebas de precisión, usabilidad y utilidad)"]
+        F5 --> F6["Fase 6: Implementación y Seguimiento<br>(Programa Piloto y Mantenimiento)"]
     end
 ```
 
@@ -24,8 +29,8 @@ graph TD
 | :--- | :--- | :--- |
 | **00_documento_base.md** | General / Introducción | Establece el contexto del 8vo semestre, diagnostica el problema de la sobrecarga de información que sufren los estudiantes al coordinar trabajos grupales por chats asíncronos, y define los objetivos del proyecto. |
 | **01_diagnostico.md** | Fase 1: Diagnóstico | Establece la meta del sistema, analiza el problema de la sobrecarga y define los perfiles de usuario. |
-| **02_diseno_pedagogico.md** | Fase 2: Diseño Pedagógico | Define los cuatro ejes de análisis (acuerdos, desacuerdos, tareas y dudas) y el mapa del trabajo en equipo. |
-| **03_diseno_computacional.md** | Fase 3: Diseño Computacional | Detalla la entrada de datos, el procesamiento con APIs de IA y el diseño de la interfaz de usuario. |
+| **02_diseno_pedagogico.md** | Fase 2: Diseño Pedagógico y Planificación | Define los cuatro ejes de análisis (acuerdos, desacuerdos, tareas y dudas), el mapa del trabajo en equipo, y sienta las bases para las entrevistas e historias de usuario. |
+| **03_diseno_computacional.md** | Fase 3: Diseño Computacional y Técnico | Detalla la estructura del modelo entidad-relación (MER) y la arquitectura para el desarrollo técnico de la extensión y el procesamiento. |
 | **04_produccion_desarrollo.md** | Fase 4: Producción (Plan) | Plantea la integración técnica y el refinamiento de prompts para diferentes tipos de texto (chats y foros). |
 | **05_evaluacion.md** | Fase 5: Evaluación (Plan) | Estructura las pruebas de campo en base a precisión, facilidad de uso y utilidad educativa. |
 | **06_implementacion_seguimiento.md** | Fase 6: Implementación (Plan) | Diseña el programa piloto en cursos reales de la Universidad de Córdoba y el plan de mejoras. |
