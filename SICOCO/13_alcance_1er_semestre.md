@@ -12,11 +12,11 @@ El proyecto se estructuró siguiendo estrictamente la metodología **MODESEC** (
 
 ```mermaid
 graph TD
-    subgraph Semestre 1: Diseño y Planificación (Completado)
+    subgraph S1 ["Semestre 1: Diseño y Planificación (Completado)"]
         F1["Fase 1: Diagnóstico<br>(Problemática de sobrecarga y competencias)"] --> F2["Fase 2: Diseño Pedagógico<br>(Definición de Acuerdos, Dudas, Tareas, Desacuerdos)"]
         F2 --> F3["Fase 3: Diseño Computacional<br>(Requerimientos, MER, Historias y Trazabilidad)"]
     end
-    subgraph Semestre 2: Construcción y Validación (Próximo Semestre)
+    subgraph S2 ["Semestre 2: Construcción y Validación (Próximo Semestre)"]
         F3 --> F4["Fase 4: Producción y Desarrollo<br>(Programación de la extensión, backend y prompts)"]
         F4 --> F5["Fase 5: Evaluación<br>(Pruebas de precisión, usabilidad y utilidad)"]
         F5 --> F6["Fase 6: Implementación y Seguimiento<br>(Programa Piloto y Mantenimiento)"]
