@@ -12,9 +12,15 @@ El proyecto se estructuró siguiendo estrictamente la metodología **MODESEC** (
 
 ```mermaid
 graph TD
-    A["Fase 0 y 1: Diagnóstico<br>(Problemática de la sobrecarga de chats)"] --> B["Fase 2: Diseño Pedagógico<br>(Definición de Acuerdos, Dudas, Tareas, Desacuerdos)"]
-    B --> C["Fase 3: Diseño Computacional<br>(Entrevistas de requerimientos y Modelo Relacional)"]
-    C --> D["Fases 4, 5 y 6: Planificación e Historias<br>(Historias de Usuario, Roadmap y Trazabilidad)"]
+    subgraph Semestre 1: Diseño y Planificación (Completado)
+        F1["Fase 1: Diagnóstico<br>(Problemática de sobrecarga y competencias)"] --> F2["Fase 2: Diseño Pedagógico<br>(Definición de Acuerdos, Dudas, Tareas, Desacuerdos)"]
+        F2 --> F3["Fase 3: Diseño Computacional<br>(Requerimientos, MER, Historias y Trazabilidad)"]
+    end
+    subgraph Semestre 2: Construcción y Validación (Próximo Semestre)
+        F3 --> F4["Fase 4: Producción y Desarrollo<br>(Programación de la extensión, backend y prompts)"]
+        F4 --> F5["Fase 5: Evaluación<br>(Pruebas de precisión, usabilidad y utilidad)"]
+        F5 --> F6["Fase 6: Implementación y Seguimiento<br>(Programa Piloto y Mantenimiento)"]
+    end
 ```
 
 ### 📈 Tabla de Hitos de Documentación
@@ -22,7 +28,12 @@ graph TD
 | Archivo | Fase / Tema | Contenido Clave Detallado |
 | :--- | :--- | :--- |
 | **00_documento_base.md** | General / Introducción | Establece el contexto del 8vo semestre, diagnostica el problema de la sobrecarga de información que sufren los estudiantes al coordinar trabajos grupales por chats asíncronos, y define los objetivos del proyecto. |
-| **01 a 06_fases.md** | Fases MODESEC | Guía secuencial del ciclo de vida del software educativo, detallando cómo se evalúan las competencias, las mediaciones tecnológicas y los indicadores pedagógicos propuestos para SICOCO. |
+| **01_diagnostico.md** | Fase 1: Diagnóstico | Establece la meta del sistema, analiza el problema de la sobrecarga y define los perfiles de usuario. |
+| **02_diseno_pedagogico.md** | Fase 2: Diseño Pedagógico | Define los cuatro ejes de análisis (acuerdos, desacuerdos, tareas y dudas) y el mapa del trabajo en equipo. |
+| **03_diseno_computacional.md** | Fase 3: Diseño Computacional | Detalla la entrada de datos, el procesamiento con APIs de IA y el diseño de la interfaz de usuario. |
+| **04_produccion_desarrollo.md** | Fase 4: Producción (Plan) | Plantea la integración técnica y el refinamiento de prompts para diferentes tipos de texto (chats y foros). |
+| **05_evaluacion.md** | Fase 5: Evaluación (Plan) | Estructura las pruebas de campo en base a precisión, facilidad de uso y utilidad educativa. |
+| **06_implementacion_seguimiento.md** | Fase 6: Implementación (Plan) | Diseña el programa piloto en cursos reales de la Universidad de Córdoba y el plan de mejoras. |
 | **07A_entrevista_preguntas.md** y **07B_respuestas.md** | Requerimientos | Levantamiento de requerimientos a través de un cuestionario de 20 preguntas que simula una entrevista con un Arquitecto de Datos para extraer las entidades y relaciones del sistema. |
 | **07_entrevista_arquitectura_datos_OG.md** | Estructura Inicial | Documento preliminar con las respuestas de datos crudos sobre las cuales se diseñaron las tablas y flujos lógicos de mensajería del sistema. |
 | **08_historias_usuario.md** | Requisitos Funcionales | Matriz con historias de usuario y criterios de aceptación específicos agrupados en 5 zonas (Usuarios, Sesiones, IA, Dashboard y Seguridad/Evaluación). |
