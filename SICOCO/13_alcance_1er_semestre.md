@@ -16,11 +16,6 @@ graph TD
         F1["Fase 1: Diagnóstico<br>(Problemática de sobrecarga y competencias)"] --> F2["Fase 2: Diseño Pedagógico<br>(Definición de Acuerdos, Dudas, Tareas, Desacuerdos)"]
         F2 --> F3["Fase 3: Diseño Computacional<br>(Requerimientos, MER, Historias y Trazabilidad)"]
     end
-    subgraph S2 ["Semestre 2: Construcción y Validación (Próximo Semestre)"]
-        F3 --> F4["Fase 4: Producción y Desarrollo<br>(Programación de la extensión, backend y prompts)"]
-        F4 --> F5["Fase 5: Evaluación<br>(Pruebas de precisión, usabilidad y utilidad)"]
-        F5 --> F6["Fase 6: Implementación y Seguimiento<br>(Programa Piloto y Mantenimiento)"]
-    end
 ```
 
 ### 📈 Tabla de Hitos de Documentación
