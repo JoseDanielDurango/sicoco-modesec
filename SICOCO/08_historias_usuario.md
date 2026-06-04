@@ -1,10 +1,10 @@
-# 📖 Matriz de Historias de Usuario - Proyecto SICOCO
+# Matriz de Historias de Usuario - Proyecto SICOCO
 
 **Basado en Arquitectura de Datos y Metodología MODESEC**
 
 ---
 
-## 🧑‍🤝‍🧑 ZONA 1: Usuarios, Roles y Organización (PER)
+## ZONA 1: Usuarios, Roles y Organización (PER)
 **Entidades:** Estudiante, Profesor, Administrador, Curso y Equipo.
 
 | ID | Historia (Como / Quiero / Para) | Valor | Prioridad | Dependencias | Criterios de aceptación |
@@ -16,7 +16,7 @@
 
 ---
 
-## 📂 ZONA 2: Entradas y Sesiones de Trabajo (SES)
+## ZONA 2: Entradas y Sesiones de Trabajo (SES)
 **Manejo de la entidad:** Reunión, Registro_Chat y Mensajes individuales.
 
 | ID | Historia (Como / Quiero / Para) | Valor | Prioridad | Dependencias | Criterios de aceptación |
@@ -28,7 +28,7 @@
 
 ---
 
-## 🤖 ZONA 3: Motor de IA y Procesamiento (IA)
+## ZONA 3: Motor de IA y Procesamiento (IA)
 **Uso de:** Ingeniería de Prompts y categorización (Acuerdos, Tareas, Dudas).
 
 | ID | Historia (Como / Quiero / Para) | Valor | Prioridad | Dependencias | Criterios de aceptación |
@@ -40,7 +40,7 @@
 
 ---
 
-## 📊 ZONA 4: Visualización y Línea de Tiempo (GUI)
+## ZONA 4: Visualización y Línea de Tiempo (GUI)
 **Entidades:** Mapeo de Co-creación y visualización de hitos.
 
 | ID | Historia (Como / Quiero / Para) | Valor | Prioridad | Dependencias | Criterios de aceptación |
@@ -52,7 +52,7 @@
 
 ---
 
-## 🛡️ ZONA 5: Evaluación y Seguridad (EVA)
+## ZONA 5: Evaluación y Seguridad (EVA)
 **Control de Calidad:** Auditoría y Privacidad (Created_At, Updated_At).
 
 | ID | Historia (Como / Quiero / Para) | Valor | Prioridad | Dependencias | Criterios de aceptación |

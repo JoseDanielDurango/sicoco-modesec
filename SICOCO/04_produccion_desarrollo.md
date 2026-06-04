@@ -1,16 +1,16 @@
-# 🛠️ Fase 4: Producción y Desarrollo
+# Fase 4: Producción y Desarrollo
 
 En esta etapa vamos a crear el primer modelo real del programa, ensamblando la interfaz gráfica de la **extensión de navegador** (MVP) con el motor de Inteligencia Artificial.
 
 ---
 
-## 🧩 Integración
+## Integración
 
 Se programará la interfaz donde el usuario cargará su documento y cómo el backend se conecta a la API de la Inteligencia Artificial. Nos aseguraremos de que el texto del historial se envíe estructuradamente y que la respuesta procesada se muestre en el Dashboard.
 
 ---
 
-## 🎯 Ingeniería de Prompts (Instrucciones a la IA)
+## Ingeniería de Prompts (Instrucciones a la IA)
 
 **Esta es la parte más crítica de la programación.**
 
@@ -18,11 +18,11 @@ Dado que no entrenaremos un modelo desde cero, tendremos que iterar y perfeccion
 
 ---
 
-## 💬 Trabajar con Distintos Textos
+## Trabajar con Distintos Textos
 
 El programa tendrá que manejar historiales exportados que provienen de al menos dos formas de comunicarse:
 
-- ⚡ **Chats rápidos y cortos** (mensajes fraccionados, al estilo de WhatsApp o Telegram).
-- 📑 **Foros ordenados y formales** (mensajes largos, reflexivos y estructurados).
+- **Chats rápidos y cortos** (mensajes fraccionados, al estilo de WhatsApp o Telegram).
+- **Foros ordenados y formales** (mensajes largos, reflexivos y estructurados).
 
-> 💡 *(La instrucción de la IA en SICOCO tendrá que estar diseñada para identificar qué tipo de ritmo conversacional está leyendo y adaptarse para extraer la misma calidad de información en ambos escenarios).*
+> *(La instrucción de la IA en SICOCO tendrá que estar diseñada para identificar qué tipo de ritmo conversacional está leyendo y adaptarse para extraer la misma calidad de información en ambos escenarios).*

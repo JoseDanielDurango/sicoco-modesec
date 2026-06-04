@@ -1,12 +1,12 @@
-# 🎓 Guía de Estudio y Presentación de SICOCO
+# Guía de Estudio y Presentación de SICOCO
 
-## 🚀 Evolución, Colaboración y Estado del Proyecto (Solo Diseño y Documentación)
+## Evolución, Colaboración y Estado del Proyecto (Solo Diseño y Documentación)
 
 Este documento sirve como resumen ejecutivo y guion de estudio para presentar el proyecto **SICOCO** (*Sintetizador de Co-creación Colaborativa*). Explica cómo nació el proyecto, cómo evolucionó gracias al trabajo conjunto entre el equipo de estudiantes y el asistente de IA, y cuál es el estado real y el alcance logrado al cierre de este semestre.
 
 ---
 
-## 🗺️ 1. Cronología y Evolución del Proyecto
+## 1. Cronología y Evolución del Proyecto
 
 El proyecto se estructuró siguiendo estrictamente la metodología **MODESEC** (Modelo de Organización de Estrategias para el Desarrollo de Software Educativo por Competencias) para asegurar que la futura herramienta no sea solo técnica, sino que tenga un **propósito pedagógico** que fortalezca el aprendizaje colaborativo.
 
@@ -18,7 +18,7 @@ graph TD
     end
 ```
 
-### 📈 Tabla de Hitos de Documentación
+### Tabla de Hitos de Documentación
 
 | Archivo | Fase / Tema | Contenido Clave Detallado |
 | :--- | :--- | :--- |
@@ -39,18 +39,18 @@ graph TD
 
 ---
 
-## 🤝 2. División del Trabajo: ¿Quién hizo qué?
+## 2. División del Trabajo: ¿Quién hizo qué?
 
 El diseño del proyecto es el resultado de un flujo colaborativo e iterativo entre el equipo de estudiantes y el asistente de Inteligencia Artificial.
 
-### 🤖 Lo que hizo la IA (Antigravity)
+### Lo que hizo la IA (Antigravity)
 
 * **Generación de Estructuras Base:** Diseñar las plantillas iniciales basadas en el estándar de MODESEC.
 * **Modelo Relacional Lógico (DBML):** Normalizar y estructurar las 19 entidades en código DBML (`diagrama_bd.dbml`) y validar las relaciones entre tablas para evitar desconnectiones lógicas (como la vinculación de `Configuracion_Prompt`).
 * **Matrices de Trazabilidad:** Comparar de forma automatizada las preguntas de requerimientos con el modelo físico de base de datos.
 * **Especificaciones Técnicas:** Traducir las necesidades pedagógicas a componentes de software y flujos lógicos de APIs de lenguaje de gran tamaño (LLM).
 
-### 👥 Lo que añadió el equipo de trabajo (Manualmente)
+### Lo que añadió el equipo de trabajo (Manualmente)
 
 * **Refinamiento de Contenido:** Contextualizar las definiciones del proyecto a nuestra realidad.
 * **Estilo y Formato (Prettier):** Corregir, limpiar y dar formato markdown uniforme a todos los archivos para asegurar que la visualización final sea limpia.
@@ -59,20 +59,20 @@ El diseño del proyecto es el resultado de un flujo colaborativo e iterativo ent
 
 ---
 
-## 🛠️ 3. Estado del Proyecto al Cierre del Semestre (Solo Diseño)
+## 3. Estado del Proyecto al Cierre del Semestre (Solo Diseño)
 
 Es importante enfatizar que **SICOCO no cuenta con un prototipo de software programado o MVP ejecutable en este momento**. El trabajo desarrollado se centró en la **planificación, fundamentación metodológica y diseño arquitectónico**.
 
 Lo que se encuentra en el repositorio de GitHub es la documentación de diseño lista para que, **en el próximo semestre**, se pueda proceder con la programación y construcción física del MVP (la Extensión de Navegador).
 
-### 💡 Diseño de los 4 Pilares del Resumen Inteligente
+### Diseño de los 4 Pilares del Resumen Inteligente
 
-1. **✅ Acuerdos:** Identificación de decisiones y consensos grupales.
-2. **❌ Desacuerdos:** Registro de debates y posturas encontradas.
-3. **❓ Dudas Abiertas:** Listado de preguntas que no se resolvieron en la sesión.
-4. **📋 Tareas (To-Do):** Asignación de actividades con responsables y plazos.
+1. **Acuerdos:** Identificación de decisiones y consensos grupales.
+2. **Desacuerdos:** Registro de debates y posturas encontradas.
+3. **Dudas Abiertas:** Listado de preguntas que no se resolvieron en la sesión.
+4. **Tareas (To-Do):** Asignación de actividades con responsables y plazos.
 
-### 🗄️ Diseño de la Base de Datos (19 Tablas Normalizadas)
+### Diseño de la Base de Datos (19 Tablas Normalizadas)
 
 El modelado de datos estructurado para soportar el procesamiento está listo e incluye:
 

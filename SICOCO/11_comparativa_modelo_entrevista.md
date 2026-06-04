@@ -1,4 +1,4 @@
-# 📊 Comparativa: Modelo Entidad-Relación vs. Entrevista Técnica
+# Comparativa: Modelo Entidad-Relación vs. Entrevista Técnica
 
 **Metodología:** MODESEC | **Proyecto:** Sintetizador de Co-creación Colaborativa (SICOCO)
 Universidad de Córdoba · Licenciatura en Informática · Diseño y Desarrollo de Software Educativo I
